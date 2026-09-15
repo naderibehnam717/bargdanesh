@@ -65,57 +65,8 @@
                 <p class="section__subtitle">رشته مورد نظرت را انتخاب کن</p>
             </div>
 
-            <div class="cards-grid">
-
-                <a href="notes.html" class="content-card">
-                    <div class="category-card__icon">📐</div>
-                    <h3 class="content-card__title">ریاضی و آمار</h3>
-                    <p class="content-card__desc">ریاضی، معادلات، آمار و احتمالات</p>
-                </a>
-
-                <a href="notes.html" class="content-card">
-                    <div class="category-card__icon">⚛️</div>
-                    <h3 class="content-card__title">فیزیک</h3>
-                    <p class="content-card__desc">فیزیک پایه و تخصصی</p>
-                </a>
-
-                <a href="notes.html" class="content-card">
-                    <div class="category-card__icon">🧪</div>
-                    <h3 class="content-card__title">شیمی</h3>
-                    <p class="content-card__desc">شیمی عمومی، آلی و تجزیه</p>
-                </a>
-
-                <a href="notes.html" class="content-card">
-                    <div class="category-card__icon">🧬</div>
-                    <h3 class="content-card__title">زیست‌شناسی</h3>
-                    <p class="content-card__desc">زیست سلولی، ژنتیک و فیزیولوژی</p>
-                </a>
-
-                <a href="notes.html" class="content-card">
-                    <div class="category-card__icon">⚙️</div>
-                    <h3 class="content-card__title">مهندسی</h3>
-                    <p class="content-card__desc">برق، کامپیوتر و مکانیک</p>
-                </a>
-
-                <a href="notes.html" class="content-card">
-                    <div class="category-card__icon">💻</div>
-                    <h3 class="content-card__title">کامپیوتر</h3>
-                    <p class="content-card__desc">برنامه‌نویسی و مبانی کامپیوتر</p>
-                </a>
-
-                <a href="notes.html" class="content-card">
-                    <div class="category-card__icon">📚</div>
-                    <h3 class="content-card__title">معارف</h3>
-                    <p class="content-card__desc">اندیشه اسلامی و معارف</p>
-                </a>
-
-                <a href="notes.html" class="content-card">
-                    <div class="category-card__icon">🧠</div>
-                    <h3 class="content-card__title">روانشناسی</h3>
-                    <p class="content-card__desc">روانشناسی عمومی و رشد</p>
-                </a>
-
-            </div>
+            <!-- دسته‌بندی‌ها خودکار از files.js ساخته می‌شن -->
+            <div class="cards-grid" id="categoriesGrid"></div>
 
         </div>
     </main>
@@ -158,6 +109,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="files.js"></script>
 
     <script>
         const themeToggle = document.getElementById('themeToggle');
@@ -214,13 +167,8 @@
             });
         }
 
-        if (navClose) {
-            navClose.addEventListener('click', closeMenu);
-        }
-
-        if (navOverlay) {
-            navOverlay.addEventListener('click', closeMenu);
-        }
+        if (navClose) navClose.addEventListener('click', closeMenu);
+        if (navOverlay) navOverlay.addEventListener('click', closeMenu);
 
         if (nav) {
             nav.querySelectorAll('.nav__link').forEach(link => {
@@ -228,7 +176,73 @@
             });
         }
 
-        // ===== جستجوی زنده =====
+        // ===== ساخت خودکار دسته‌بندی‌ها =====
+        function buildCategories() {
+            const grid = document.getElementById('categoriesGrid');
+            if (!grid || typeof allFiles === 'undefined') return;
+
+            // فقط فایل‌های دانشگاهی
+            const uniFiles = allFiles.filter(f => f.level === 'دانشگاهی');
+
+            // دسته‌های یکتا
+            const categories = [...new Set(uniFiles.map(f => f.category))];
+
+            // آیکون‌های پیش‌فرض برای هر دسته
+            const icons = {
+                'ریاضی': '📐',
+                'آمار': '📊',
+                'فیزیک': '⚛️',
+                'شیمی': '🧪',
+                'زیست': '🧬',
+                'زیست‌شناسی': '🧬',
+                'مهندسی': '⚙️',
+                'کامپیوتر': '💻',
+                'معارف': '📚',
+                'روانشناسی': '🧠',
+                'زبان': '🌍',
+                'ادبیات': '📖',
+                'تاریخ': '🏛️',
+                'اقتصاد': '💰',
+                'حقوق': '⚖️',
+                'پزشکی': '🩺',
+                'مدیریت': '📋'
+            };
+
+            const typeLabels = {
+                'جزوه': 'جزوه',
+                'کتاب': 'کتاب',
+                'نمونه سوال': 'نمونه سوال'
+            };
+
+            if (categories.length === 0) {
+                grid.innerHTML = '<p style="text-align: center; padding: 40px; color: #999; grid-column: 1 / -1;">هنوز فایلی اضافه نشده است.</p>';
+                return;
+            }
+
+            grid.innerHTML = categories.map(cat => {
+                const filesInCat = uniFiles.filter(f => f.category === cat);
+                const types = [...new Set(filesInCat.map(f => f.type))];
+                const typesText = types.map(t => typeLabels[t] || t).join('، ');
+
+                // اگر فقط یه نوع فایل داشت، به همون صفحه بره
+                let href = 'notes.html';
+                if (types.length === 1) {
+                    if (types[0] === 'کتاب') href = 'books.html';
+                    else if (types[0] === 'نمونه سوال') href = 'exams.html';
+                    else href = 'notes.html';
+                }
+
+                const icon = icons[cat] || '📁';
+
+                return '<a href="' + href + '" class="content-card">' +
+                    '<div class="category-card__icon">' + icon + '</div>' +
+                    '<h3 class="content-card__title">' + cat + '</h3>' +
+                    '<p class="content-card__desc">' + filesInCat.length + ' فایل — ' + typesText + '</p>' +
+                '</a>';
+            }).join('');
+        }
+
+        // ===== جستجو =====
         const searchForm = document.querySelector('.js-search');
         const searchInput = document.querySelector('.js-search-input');
 
@@ -241,6 +255,8 @@
                 });
             });
         }
+
+        window.addEventListener('load', buildCategories);
     </script>
 
 </body>

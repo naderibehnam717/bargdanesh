@@ -60,113 +60,13 @@
                 <button type="submit" class="btn btn--primary">🔍 جستجو</button>
             </form>
 
-            <div class="filter-bar">
-                <a href="#" class="filter-bar__item filter-bar__item--active">همه</a>
-                <a href="#" class="filter-bar__item">روانشناسی</a>
-                <a href="#" class="filter-bar__item">علوم تربیتی</a>
-                <a href="#" class="filter-bar__item">جامعه‌شناسی</a>
-                <a href="#" class="filter-bar__item">زبان انگلیسی</a>
+            <!-- مقالات اینجا به‌صورت خودکار از فایل articles-data.js اضافه می‌شن -->
+            <div class="cards-grid" id="articlesGrid">
+                <p style="text-align: center; padding: 60px 20px; color: var(--text-muted); grid-column: 1 / -1; font-size: 15px;">
+                    📝 هنوز مقاله‌ای اضافه نشده است. به‌زودی...
+                </p>
             </div>
 
-            <div class="cards-grid js-cards">
-
-                <article class="content-card">
-                    <span class="content-card__badge content-card__badge--blue">روانشناسی</span>
-                    <h2 class="content-card__title">روانشناسی چیست؟ تعریف، مباحث و کاربردها</h2>
-                    <p class="content-card__desc">
-                        روانشناسی علمی است که رفتار و فرایندهای ذهنی انسان را بررسی می‌کند. این علم موضوعاتی مانند یادگیری، حافظه، هیجان، شخصیت و رفتار اجتماعی را شامل می‌شود.
-                    </p>
-                    <div class="content-card__meta">
-                        <span>📅 ۲ روز پیش</span>
-                        <span>⏱️ ۵ دقیقه مطالعه</span>
-                    </div>
-                    <div class="content-card__footer">
-                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
-                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
-                    </div>
-                </article>
-
-                <article class="content-card">
-                    <span class="content-card__badge content-card__badge--green">علوم تربیتی</span>
-                    <h2 class="content-card__title">اهمیت مطالعه منظم در یادگیری</h2>
-                    <p class="content-card__desc">
-                        مطالعه منظم می‌تواند به افزایش دانش، تقویت حافظه و بهبود فرایند یادگیری کمک کند. در این مقاله به بررسی روش‌های موثر مطالعه می‌پردازیم.
-                    </p>
-                    <div class="content-card__meta">
-                        <span>📅 ۵ روز پیش</span>
-                        <span>⏱️ ۷ دقیقه مطالعه</span>
-                    </div>
-                    <div class="content-card__footer">
-                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
-                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
-                    </div>
-                </article>
-
-                <article class="content-card">
-                    <span class="content-card__badge content-card__badge--purple">جامعه‌شناسی</span>
-                    <h2 class="content-card__title">مبانی جامعه‌شناسی و کاربردهای آن</h2>
-                    <p class="content-card__desc">
-                        جامعه‌شناسی به مطالعه رفتار اجتماعی انسان‌ها و ساختارهای اجتماعی می‌پردازد. آشنایی با این علم برای درک بهتر جامعه ضروری است.
-                    </p>
-                    <div class="content-card__meta">
-                        <span>📅 ۱ هفته پیش</span>
-                        <span>⏱️ ۶ دقیقه مطالعه</span>
-                    </div>
-                    <div class="content-card__footer">
-                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
-                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
-                    </div>
-                </article>
-
-                <article class="content-card">
-                    <span class="content-card__badge content-card__badge--rose">زبان انگلیسی</span>
-                    <h2 class="content-card__title">روش‌های تقویت مکالمه زبان انگلیسی</h2>
-                    <p class="content-card__desc">
-                        تقویت مکالمه زبان انگلیسی نیازمند تمرین مداوم و استفاده از روش‌های صحیح است. در این مقاله بهترین روش‌ها را بررسی می‌کنیم.
-                    </p>
-                    <div class="content-card__meta">
-                        <span>📅 ۱ هفته پیش</span>
-                        <span>⏱️ ۸ دقیقه مطالعه</span>
-                    </div>
-                    <div class="content-card__footer">
-                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
-                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
-                    </div>
-                </article>
-
-                <article class="content-card">
-                    <span class="content-card__badge content-card__badge--blue">روانشناسی</span>
-                    <h2 class="content-card__title">روانشناسی رشد در کودکان</h2>
-                    <p class="content-card__desc">
-                        روانشناسی رشد به بررسی تغییرات رفتاری و ذهنی انسان در طول زندگی می‌پردازد. آشنایی با مراحل رشد کودک اهمیت زیادی دارد.
-                    </p>
-                    <div class="content-card__meta">
-                        <span>📅 ۲ هفته پیش</span>
-                        <span>⏱️ ۱۰ دقیقه مطالعه</span>
-                    </div>
-                    <div class="content-card__footer">
-                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
-                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
-                    </div>
-                </article>
-
-                <article class="content-card">
-                    <span class="content-card__badge content-card__badge--green">علوم تربیتی</span>
-                    <h2 class="content-card__title">نقش معلم در فرایند یادگیری</h2>
-                    <p class="content-card__desc">
-                        معلم به عنوان راهنما در فرایند یادگیری نقش کلیدی دارد. بررسی این نقش می‌تواند به بهبود آموزش کمک کند.
-                    </p>
-                    <div class="content-card__meta">
-                        <span>📅 ۲ هفته پیش</span>
-                        <span>⏱️ ۵ دقیقه مطالعه</span>
-                    </div>
-                    <div class="content-card__footer">
-                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
-                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
-                    </div>
-                </article>
-
-            </div>
         </div>
     </main>
 
@@ -276,13 +176,8 @@
             });
         }
 
-        if (navClose) {
-            navClose.addEventListener('click', closeMenu);
-        }
-
-        if (navOverlay) {
-            navOverlay.addEventListener('click', closeMenu);
-        }
+        if (navClose) navClose.addEventListener('click', closeMenu);
+        if (navOverlay) navOverlay.addEventListener('click', closeMenu);
 
         if (nav) {
             nav.querySelectorAll('.nav__link').forEach(link => {
@@ -293,15 +188,13 @@
         // ===== جستجو =====
         const searchForm = document.querySelector('.js-search');
         const searchInput = document.querySelector('.js-search-input');
-        const cards = document.querySelectorAll('.content-card');
 
         if (searchForm && searchInput) {
             searchForm.addEventListener('submit', (e) => e.preventDefault());
             searchInput.addEventListener('input', (e) => {
                 const query = e.target.value.trim().toLowerCase();
-                cards.forEach(card => {
-                    const text = card.textContent.toLowerCase();
-                    card.style.display = text.includes(query) ? '' : 'none';
+                document.querySelectorAll('.content-card').forEach(card => {
+                    card.style.display = card.textContent.toLowerCase().includes(query) ? '' : 'none';
                 });
             });
         }

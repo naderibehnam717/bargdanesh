@@ -61,93 +61,12 @@
             </form>
 
             <div class="section__header">
-                <h2 class="section__title">🎒 مقطع ابتدایی</h2>
-                <p class="section__subtitle">پایه اول تا ششم دبستان</p>
+                <h2 class="section__title">دسته‌بندی‌ها</h2>
+                <p class="section__subtitle">منابع مورد نظرت را انتخاب کن</p>
             </div>
 
-            <div class="cards-grid" style="margin-bottom: var(--sp-8);">
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--blue">پایه ۱</span>
-                    <h3 class="content-card__title">پایه اول دبستان</h3>
-                    <p class="content-card__desc">منابع و نمونه سوالات پایه اول</p>
-                </a>
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--green">پایه ۲</span>
-                    <h3 class="content-card__title">پایه دوم دبستان</h3>
-                    <p class="content-card__desc">منابع و نمونه سوالات پایه دوم</p>
-                </a>
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--purple">پایه ۳</span>
-                    <h3 class="content-card__title">پایه سوم دبستان</h3>
-                    <p class="content-card__desc">منابع و نمونه سوالات پایه سوم</p>
-                </a>
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--rose">پایه ۴</span>
-                    <h3 class="content-card__title">پایه چهارم دبستان</h3>
-                    <p class="content-card__desc">منابع و نمونه سوالات پایه چهارم</p>
-                </a>
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--blue">پایه ۵</span>
-                    <h3 class="content-card__title">پایه پنجم دبستان</h3>
-                    <p class="content-card__desc">منابع و نمونه سوالات پایه پنجم</p>
-                </a>
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--green">پایه ۶</span>
-                    <h3 class="content-card__title">پایه ششم دبستان</h3>
-                    <p class="content-card__desc">منابع و نمونه سوالات پایه ششم</p>
-                </a>
-            </div>
-
-            <div class="section__header">
-                <h2 class="section__title">📘 متوسطه اول</h2>
-                <p class="section__subtitle">پایه هفتم، هشتم و نهم</p>
-            </div>
-
-            <div class="cards-grid" style="margin-bottom: var(--sp-8);">
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--purple">پایه ۷</span>
-                    <h3 class="content-card__title">پایه هفتم</h3>
-                    <p class="content-card__desc">منابع و نمونه سوالات هفتم</p>
-                </a>
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--rose">پایه ۸</span>
-                    <h3 class="content-card__title">پایه هشتم</h3>
-                    <p class="content-card__desc">منابع و نمونه سوالات هشتم</p>
-                </a>
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--blue">پایه ۹</span>
-                    <h3 class="content-card__title">پایه نهم</h3>
-                    <p class="content-card__desc">منابع و نمونه سوالات نهم</p>
-                </a>
-            </div>
-
-            <div class="section__header">
-                <h2 class="section__title">🎓 متوسطه دوم</h2>
-                <p class="section__subtitle">دهم، یازدهم و دوازدهم</p>
-            </div>
-
-            <div class="cards-grid">
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--blue">ریاضی-فیزیک</span>
-                    <h3 class="content-card__title">رشته ریاضی و فیزیک</h3>
-                    <p class="content-card__desc">منابع تخصصی رشته ریاضی</p>
-                </a>
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--green">تجربی</span>
-                    <h3 class="content-card__title">رشته علوم تجربی</h3>
-                    <p class="content-card__desc">منابع تخصصی رشته تجربی</p>
-                </a>
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--purple">انسانی</span>
-                    <h3 class="content-card__title">رشته علوم انسانی</h3>
-                    <p class="content-card__desc">منابع تخصصی رشته انسانی</p>
-                </a>
-                <a href="exams.html" class="content-card">
-                    <span class="content-card__badge content-card__badge--rose">فنی</span>
-                    <h3 class="content-card__title">رشته فنی و حرفه‌ای</h3>
-                    <p class="content-card__desc">منابع تخصصی فنی</p>
-                </a>
-            </div>
+            <!-- دسته‌بندی‌ها خودکار از files.js ساخته می‌شن -->
+            <div class="cards-grid" id="categoriesGrid"></div>
 
         </div>
     </main>
@@ -190,6 +109,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="files.js"></script>
 
     <script>
         const themeToggle = document.getElementById('themeToggle');
@@ -246,13 +167,8 @@
             });
         }
 
-        if (navClose) {
-            navClose.addEventListener('click', closeMenu);
-        }
-
-        if (navOverlay) {
-            navOverlay.addEventListener('click', closeMenu);
-        }
+        if (navClose) navClose.addEventListener('click', closeMenu);
+        if (navOverlay) navOverlay.addEventListener('click', closeMenu);
 
         if (nav) {
             nav.querySelectorAll('.nav__link').forEach(link => {
@@ -260,7 +176,63 @@
             });
         }
 
-        // ===== جستجوی زنده =====
+        // ===== ساخت خودکار دسته‌بندی‌ها =====
+        function buildCategories() {
+            const grid = document.getElementById('categoriesGrid');
+            if (!grid || typeof allFiles === 'undefined') return;
+
+            // فقط فایل‌های مدرسه ای
+            const schoolFiles = allFiles.filter(f => f.level === 'مدرسه ای');
+
+            const categories = [...new Set(schoolFiles.map(f => f.category))];
+
+            const icons = {
+                'ریاضی': '📐',
+                'علوم': '🔬',
+                'فارسی': '📖',
+                'ادبیات': '📖',
+                'عربی': '🕌',
+                'دینی': '📿',
+                'زبان': '🌍',
+                'اجتماعی': '🏛️',
+                'قرآن': '📿',
+                'علوم تجربی': '🧪'
+            };
+
+            const typeLabels = {
+                'جزوه': 'جزوه',
+                'کتاب': 'کتاب',
+                'نمونه سوال': 'نمونه سوال'
+            };
+
+            if (categories.length === 0) {
+                grid.innerHTML = '<p style="text-align: center; padding: 40px; color: #999; grid-column: 1 / -1;">هنوز فایلی اضافه نشده است.</p>';
+                return;
+            }
+
+            grid.innerHTML = categories.map(cat => {
+                const filesInCat = schoolFiles.filter(f => f.category === cat);
+                const types = [...new Set(filesInCat.map(f => f.type))];
+                const typesText = types.map(t => typeLabels[t] || t).join('، ');
+
+                let href = 'exams.html';
+                if (types.length === 1) {
+                    if (types[0] === 'جزوه') href = 'notes.html';
+                    else if (types[0] === 'کتاب') href = 'books.html';
+                    else href = 'exams.html';
+                }
+
+                const icon = icons[cat] || '📁';
+
+                return '<a href="' + href + '" class="content-card">' +
+                    '<div class="category-card__icon">' + icon + '</div>' +
+                    '<h3 class="content-card__title">' + cat + '</h3>' +
+                    '<p class="content-card__desc">' + filesInCat.length + ' فایل — ' + typesText + '</p>' +
+                '</a>';
+            }).join('');
+        }
+
+        // ===== جستجو =====
         const searchForm = document.querySelector('.js-search');
         const searchInput = document.querySelector('.js-search-input');
 
@@ -273,6 +245,8 @@
                 });
             });
         }
+
+        window.addEventListener('load', buildCategories);
     </script>
 
 </body>
