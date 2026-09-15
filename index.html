@@ -145,6 +145,32 @@
                 </div>
 
                 <aside class="sidebar">
+
+                    <!-- ===== شمارش معکوس کنکور ===== -->
+                    <div class="countdown">
+                        <span class="countdown__badge">احتمالی</span>
+                        <h3 class="countdown__title">⏳ تا کنکور سراسری</h3>
+                        <div class="countdown__grid">
+                            <div class="countdown__item">
+                                <span class="countdown__num" id="cd-days">۰</span>
+                                <span class="countdown__label">روز</span>
+                            </div>
+                            <div class="countdown__item">
+                                <span class="countdown__num" id="cd-hours">۰</span>
+                                <span class="countdown__label">ساعت</span>
+                            </div>
+                            <div class="countdown__item">
+                                <span class="countdown__num" id="cd-mins">۰</span>
+                                <span class="countdown__label">دقیقه</span>
+                            </div>
+                            <div class="countdown__item">
+                                <span class="countdown__num" id="cd-secs">۰</span>
+                                <span class="countdown__label">ثانیه</span>
+                            </div>
+                        </div>
+                        <p class="countdown__note">📅 ۱۱ تیر ۱۴۰۶ — ممکنه تغییر کنه</p>
+                    </div>
+
                     <h3 class="sidebar__title">🔗 لینک‌های مفید</h3>
                     <ul class="sidebar__list">
                         <li class="sidebar__section">🏫 آموزش و پرورش</li>
@@ -404,10 +430,50 @@
             }
         }
 
+        // ===== شمارش معکوس کنکور =====
+        // تاریخ احتمالی: ۱۱ تیر ۱۴۰۶ = 2027-07-02
+        const konkurDate = new Date("2027-07-02T08:00:00").getTime();
+
+        function toFaNum(n) {
+            return String(n).padStart(2, '0').replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+        }
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = konkurDate - now;
+
+            const daysEl = document.getElementById('cd-days');
+            const hoursEl = document.getElementById('cd-hours');
+            const minsEl = document.getElementById('cd-mins');
+            const secsEl = document.getElementById('cd-secs');
+
+            if (!daysEl) return;
+
+            if (distance < 0) {
+                daysEl.textContent = '۰';
+                hoursEl.textContent = '۰';
+                minsEl.textContent = '۰';
+                secsEl.textContent = '۰';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysEl.textContent = toFaNum(days);
+            hoursEl.textContent = toFaNum(hours);
+            minsEl.textContent = toFaNum(mins);
+            secsEl.textContent = toFaNum(secs);
+        }
+
         window.addEventListener('load', function() {
             initLatestFiles();
             initStats();
             initHomeSearch();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
         });
     </script>
 
