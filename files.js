@@ -5,9 +5,10 @@ const allFiles = [
         category: "فیزیک",
         type: "جزوه",
         level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
         viewUrl: "https://drive.google.com/file/d/1XKAoerWekowO56UXQ_0iw3WwX3FN0Q60/view",
         downloadUrl: "https://drive.google.com/uc?export=download&id=1XKAoerWekowO56UXQ_0iw3WwX3FN0Q60",
-        downloadName: "جزوه-فیزیک-پایه.pdf",
+        downloadName: "jozve-fizik-paye.pdf",
         color: "purple"
     },
     {
