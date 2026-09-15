@@ -47,6 +47,30 @@
     <div class="nav-overlay" id="navOverlay"></div>
 
     <section class="hero">
+
+        <!-- ===== انیمیشن شناور Hero ===== -->
+        <div class="hero-float" aria-hidden="true">
+            <!-- ذرات نور -->
+            <span class="hero-float__particle hero-float__particle--1"></span>
+            <span class="hero-float__particle hero-float__particle--2"></span>
+            <span class="hero-float__particle hero-float__particle--3"></span>
+            <span class="hero-float__particle hero-float__particle--4"></span>
+            <span class="hero-float__particle hero-float__particle--5"></span>
+            <span class="hero-float__particle hero-float__particle--6"></span>
+
+            <!-- آیکون‌های شناور -->
+            <span class="hero-float__item hero-float__item--1">📚</span>
+            <span class="hero-float__item hero-float__item--2">📖</span>
+            <span class="hero-float__item hero-float__item--3">🍃</span>
+            <span class="hero-float__item hero-float__item--4">✏️</span>
+            <span class="hero-float__item hero-float__item--5">🎓</span>
+            <span class="hero-float__item hero-float__item--6">🍃</span>
+            <span class="hero-float__item hero-float__item--7">📝</span>
+            <span class="hero-float__item hero-float__item--8">💡</span>
+            <span class="hero-float__item hero-float__item--9">📐</span>
+            <span class="hero-float__item hero-float__item--10">🌿</span>
+        </div>
+
         <div class="container">
             <div class="hero__inner">
                 <span class="hero__badge">
@@ -89,6 +113,26 @@
                     <div class="section__header">
                         <h2 class="section__title">چرا برگ دانش؟</h2>
                         <p class="section__subtitle">چیزی که ما را متفاوت می‌کند</p>
+                    </div>
+
+                    <!-- ===== متن دغدغه‌ها ===== -->
+                    <div class="student-concerns">
+                        <p>
+                            می‌دونیم که شب‌های قبل از امتحان چقدر سنگینن.
+                            می‌دونیم که پیدا کردن یه جزوه‌ی درست و حسابی، وسط این‌همه سایت شلوغ و پر از تبلیغ،
+                            خودش شده یه دردسر. می‌دونیم که چقدر وقت و انرژی می‌ذاری تا یه منبع خوب پیدا کنی،
+                            ولی آخرش به یه فایل ناقص یا یه لینک خراب می‌رسی.
+                        </p>
+                        <p>
+                            <strong>برگ دانش</strong> برای همین ساخته شد.
+                            برای اینکه دیگه وقتت رو صرف گشتن تو سایت‌های شلوغ نکنی،
+                            برای اینکه بتونی با خیال راحت و بدون دردسر،
+                            همون چیزی رو که لازم داری پیدا کنی —
+                            رایگان، سریع و مرتب.
+                        </p>
+                        <p>
+                            ما اینجاییم تا مسیر یادگیری‌ات رو کمی هموارتر کنیم. 🌱
+                        </p>
                     </div>
 
                     <div class="features" style="margin-bottom: 48px;">
@@ -314,13 +358,8 @@
             });
         }
 
-        if (navClose) {
-            navClose.addEventListener('click', closeMenu);
-        }
-
-        if (navOverlay) {
-            navOverlay.addEventListener('click', closeMenu);
-        }
+        if (navClose) navClose.addEventListener('click', closeMenu);
+        if (navOverlay) navOverlay.addEventListener('click', closeMenu);
 
         if (nav) {
             nav.querySelectorAll('.nav__link').forEach(link => {
