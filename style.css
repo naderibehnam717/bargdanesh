@@ -249,6 +249,57 @@ button { cursor: pointer; border: none; background: none; }
     color: var(--text);
 }
 
+/* ===== دکمه بستن منو (موبایل) ===== */
+.nav-close {
+    display: none;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #dc2626;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    z-index: 110;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+.nav-close:hover {
+    background-color: #b91c1c;
+    transform: scale(1.08);
+}
+
+/* ===== اورلی تاریک پشت منو ===== */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 85;
+    cursor: pointer;
+}
+
+.nav-overlay.nav-overlay--active {
+    display: block;
+}
+
+@media (min-width: 769px) {
+    .nav-close,
+    .nav-overlay {
+        display: none !important;
+    }
+}
+
 /* ===== Hero ===== */
 .hero {
     padding: var(--sp-8) 0;
@@ -811,7 +862,6 @@ button { cursor: pointer; border: none; background: none; }
    آمار سایت + جستجوی زنده
    ============================================ */
 
-/* باکس آمار */
 .stats-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -839,7 +889,6 @@ button { cursor: pointer; border: none; background: none; }
     opacity: 0.9;
 }
 
-/* پیام نتیجه پیدا نشد */
 .no-result {
     grid-column: 1 / -1;
     text-align: center;
@@ -923,7 +972,7 @@ html[data-theme="dark"] .footer {
 }
 
 /* ============================================
-   ریسپانسیو — موبایل (کارت‌ها و محتوای داخلی)
+   ریسپانسیو — موبایل
    ============================================ */
 @media (max-width: 768px) {
 
@@ -961,7 +1010,6 @@ html[data-theme="dark"] .footer {
         background-color: var(--bg-alt);
     }
 
-    /* ===== کارت‌های محتوا ===== */
     .cards-grid {
         grid-template-columns: 1fr;
         gap: var(--sp-4);
@@ -1003,7 +1051,6 @@ html[data-theme="dark"] .footer {
         font-size: 12px;
     }
 
-    /* ===== کارت‌های دسته‌بندی ===== */
     .category-card {
         padding: var(--sp-5) var(--sp-4);
     }
@@ -1022,7 +1069,6 @@ html[data-theme="dark"] .footer {
         font-size: 13px;
     }
 
-    /* ===== ویژگی‌ها ===== */
     .features {
         grid-template-columns: 1fr 1fr;
         gap: var(--sp-3);
@@ -1048,7 +1094,6 @@ html[data-theme="dark"] .footer {
         line-height: 1.6;
     }
 
-    /* ===== صفحه داخلی ===== */
     .page-header {
         padding: var(--sp-5) 0;
     }
@@ -1077,7 +1122,6 @@ html[data-theme="dark"] .footer {
         margin-bottom: var(--sp-5);
     }
 
-    /* ===== جستجو ===== */
     .search-box {
         flex-direction: column;
         padding: var(--sp-3);
@@ -1087,7 +1131,6 @@ html[data-theme="dark"] .footer {
         width: 100%;
     }
 
-    /* ===== Sidebar ===== */
     .sidebar {
         padding: var(--sp-4);
     }
@@ -1101,7 +1144,6 @@ html[data-theme="dark"] .footer {
         padding: 8px 10px;
     }
 
-    /* ===== CTA ===== */
     .cta {
         padding: var(--sp-5);
         flex-direction: column;
@@ -1127,7 +1169,6 @@ html[data-theme="dark"] .footer {
         font-size: 13px;
     }
 
-    /* ===== Hero ===== */
     .hero {
         padding: var(--sp-6) 0;
     }
@@ -1149,7 +1190,6 @@ html[data-theme="dark"] .footer {
         flex-direction: column;
     }
 
-    /* ===== فوتر ===== */
     .footer {
         padding: var(--sp-6) 0 var(--sp-3);
         margin-top: var(--sp-6);
@@ -1164,7 +1204,6 @@ html[data-theme="dark"] .footer {
         font-size: 13px;
     }
 
-    /* ===== آمار سایت ===== */
     .stat-item__number { font-size: 26px; }
     .stat-item__label { font-size: 12px; }
     .stats-box { padding: var(--sp-5) var(--sp-4); }
@@ -1204,30 +1243,4 @@ html[data-theme="dark"] .footer {
     }
 
     .footer__grid { grid-template-columns: 1fr; }
-}
-/* ===== دکمه بستن منو (موبایل) ===== */
-.nav-close {
-    display: none;
-    position: fixed;
-    top: 16px;
-    right: 16px;
-    width: 44px;
-    height: 44px;
-    border-radius: var(--r-md);
-    background-color: var(--bg-alt);
-    border: 1px solid var(--border);
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--text);
-    z-index: 110;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.nav-close:hover {
-    background-color: var(--primary-soft);
-    border-color: var(--primary);
-    color: var(--primary);
 }

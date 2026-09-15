@@ -43,6 +43,7 @@
     </header>
 
     <button class="nav-close" id="navClose" aria-label="بستن منو">✕</button>
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <section class="page-header">
         <div class="container page-header__inner">
@@ -216,6 +217,7 @@
         // ===== منوی موبایل =====
         const menuToggle = document.getElementById('menuToggle');
         const navClose = document.getElementById('navClose');
+        const navOverlay = document.getElementById('navOverlay');
         const nav = document.querySelector('.nav');
 
         function openMenu() {
@@ -223,6 +225,7 @@
             nav.classList.add('nav--open');
             if (menuToggle) menuToggle.textContent = '✕';
             if (navClose) navClose.style.display = 'inline-flex';
+            if (navOverlay) navOverlay.classList.add('nav-overlay--active');
         }
 
         function closeMenu() {
@@ -230,6 +233,7 @@
             nav.classList.remove('nav--open');
             if (menuToggle) menuToggle.textContent = '☰';
             if (navClose) navClose.style.display = 'none';
+            if (navOverlay) navOverlay.classList.remove('nav-overlay--active');
         }
 
         if (menuToggle && nav) {
@@ -244,6 +248,10 @@
 
         if (navClose) {
             navClose.addEventListener('click', closeMenu);
+        }
+
+        if (navOverlay) {
+            navOverlay.addEventListener('click', closeMenu);
         }
 
         if (nav) {

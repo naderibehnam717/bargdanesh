@@ -43,6 +43,7 @@
     </header>
 
     <button class="nav-close" id="navClose" aria-label="بستن منو">✕</button>
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <section class="page-header">
         <div class="container page-header__inner">
@@ -64,12 +65,12 @@
                     برگ دانش
                 </h2>
                 <p style="font-size: 18px; color: var(--text-soft); line-height: 2;">
-                    <strong style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">دانش، یک برگ فاصله دارد.</strong>
+                    <strong style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">دانش، یک برگ فاصله دارد.</strong>
                 </p>
             </div>
 
             <div style="background-color: var(--card); padding: var(--sp-6); border-radius: var(--r-lg); border: 1px solid var(--border); box-shadow: var(--shadow-md); margin-bottom: var(--sp-6); position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 0; right: 0; left: 0; height: 3px; background: var(--gradient-primary);"></div>
+                <div style="position: absolute; top: 0; right: 0; left: 0; height: 3px; background: linear-gradient(135deg, var(--primary), var(--primary-dark));"></div>
                 <h3 style="font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: var(--sp-3); display: flex; align-items: center; gap: var(--sp-2);">
                     📖 داستان ما
                 </h3>
@@ -230,6 +231,7 @@
         // ===== منوی موبایل =====
         const menuToggle = document.getElementById('menuToggle');
         const navClose = document.getElementById('navClose');
+        const navOverlay = document.getElementById('navOverlay');
         const nav = document.querySelector('.nav');
 
         function openMenu() {
@@ -237,6 +239,7 @@
             nav.classList.add('nav--open');
             if (menuToggle) menuToggle.textContent = '✕';
             if (navClose) navClose.style.display = 'inline-flex';
+            if (navOverlay) navOverlay.classList.add('nav-overlay--active');
         }
 
         function closeMenu() {
@@ -244,6 +247,7 @@
             nav.classList.remove('nav--open');
             if (menuToggle) menuToggle.textContent = '☰';
             if (navClose) navClose.style.display = 'none';
+            if (navOverlay) navOverlay.classList.remove('nav-overlay--active');
         }
 
         if (menuToggle && nav) {
@@ -258,6 +262,10 @@
 
         if (navClose) {
             navClose.addEventListener('click', closeMenu);
+        }
+
+        if (navOverlay) {
+            navOverlay.addEventListener('click', closeMenu);
         }
 
         if (nav) {
