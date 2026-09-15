@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+    <script src="files.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -62,10 +63,21 @@
                     جزوه، کتاب، نمونه سوال و مقاله — همه در یک جا، رایگان و مرتب.
                 </p>
 
-                <form class="search" action="articles.html" method="get">
-                    <input type="text" class="search__input" name="search" placeholder="چی می‌خوای پیدا کنی؟">
+                <form class="search" id="homeSearchForm">
+                    <input type="text" class="search__input" id="homeSearchInput" placeholder="چی می‌خوای پیدا کنی؟">
                     <button type="submit" class="btn btn--primary">🔍 جستجو</button>
                 </form>
+
+                <!-- ===== نتایج جستجو ===== -->
+                <div id="searchResults" style="display: none; margin-top: 24px; text-align: right;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+                        <h3 style="font-size: 18px; font-weight: 700; color: var(--text); margin: 0;">
+                            🔍 نتایج جستجو برای: <span id="searchQuery" style="color: var(--primary);"></span>
+                        </h3>
+                        <button id="closeResults" class="btn btn--ghost btn--sm">✕ بستن</button>
+                    </div>
+                    <div class="cards-grid" id="searchResultsGrid"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -293,8 +305,6 @@
         </div>
     </footer>
 
-    <script src="files.js"></script>
-
     <script>
         // ===== دارک مود =====
         const themeToggle = document.getElementById('themeToggle');
@@ -330,8 +340,8 @@
             });
         }
 
-        // ===== ساخت کارت آخرین فایل‌ها =====
-        function createLatestCard(file) {
+        // ===== ساخت کارت =====
+        function createCard(file) {
             var buttons = '';
             if (file.viewUrl) {
                 buttons += '<a href="' + file.viewUrl + '" target="_blank" class="btn btn--primary btn--sm">مشاهده</a>';
@@ -352,22 +362,92 @@
             '</article>';
         }
 
-        // آخرین ۴ فایل را نشان بده
-        const latestContainer = document.getElementById('latestFiles');
-        if (latestContainer && typeof allFiles !== 'undefined') {
-            const latest = allFiles.slice(-4).reverse();
-            latestContainer.innerHTML = latest.map(createLatestCard).join('');
+        // ===== آخرین فایل‌ها =====
+        function initLatestFiles() {
+            const latestContainer = document.getElementById('latestFiles');
+            if (latestContainer && typeof allFiles !== 'undefined') {
+                const latest = allFiles.slice(-4).reverse();
+                latestContainer.innerHTML = latest.map(createCard).join('');
+            }
         }
 
-        // ===== پر کردن آمار سایت =====
-        if (typeof allFiles !== 'undefined') {
+        // ===== آمار سایت =====
+        function initStats() {
+            if (typeof allFiles === 'undefined') return;
+
             function toFa(n) {
                 return String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
             }
-            document.getElementById('statNotes').textContent = toFa(allFiles.filter(f => f.type === 'جزوه').length);
-            document.getElementById('statBooks').textContent = toFa(allFiles.filter(f => f.type === 'کتاب').length);
-            document.getElementById('statExams').textContent = toFa(allFiles.filter(f => f.type === 'نمونه سوال').length);
+
+            const statNotes = document.getElementById('statNotes');
+            const statBooks = document.getElementById('statBooks');
+            const statExams = document.getElementById('statExams');
+
+            if (statNotes) statNotes.textContent = toFa(allFiles.filter(f => f.type === 'جزوه').length);
+            if (statBooks) statBooks.textContent = toFa(allFiles.filter(f => f.type === 'کتاب').length);
+            if (statExams) statExams.textContent = toFa(allFiles.filter(f => f.type === 'نمونه سوال').length);
         }
+
+        // ===== جستجوی صفحه اصلی =====
+        function initHomeSearch() {
+            const homeSearchForm = document.getElementById('homeSearchForm');
+            const homeSearchInput = document.getElementById('homeSearchInput');
+            const searchResults = document.getElementById('searchResults');
+            const searchResultsGrid = document.getElementById('searchResultsGrid');
+            const searchQuerySpan = document.getElementById('searchQuery');
+            const closeResults = document.getElementById('closeResults');
+
+            function doSearch(query) {
+                if (typeof allFiles === 'undefined') {
+                    alert('فایل‌های سایت هنوز لود نشده. لطفاً صفحه را رفرش کن.');
+                    return;
+                }
+
+                const q = query.trim().toLowerCase();
+
+                if (!q) {
+                    searchResults.style.display = 'none';
+                    return;
+                }
+
+                const results = allFiles.filter(function(file) {
+                    const text = (file.title + ' ' + file.desc + ' ' + file.category + ' ' + file.type + ' ' + file.level).toLowerCase();
+                    return text.includes(q);
+                });
+
+                searchQuerySpan.textContent = query;
+                searchResults.style.display = 'block';
+
+                if (results.length === 0) {
+                    searchResultsGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #999; font-size: 15px;">نتیجه‌ای پیدا نشد 🔍</p>';
+                } else {
+                    searchResultsGrid.innerHTML = results.map(createCard).join('');
+                }
+
+                searchResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            if (homeSearchForm && homeSearchInput) {
+                homeSearchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    doSearch(homeSearchInput.value);
+                });
+            }
+
+            if (closeResults) {
+                closeResults.addEventListener('click', function() {
+                    searchResults.style.display = 'none';
+                    homeSearchInput.value = '';
+                });
+            }
+        }
+
+        // ===== اجرا بعد از لود files.js =====
+        window.addEventListener('load', function() {
+            initLatestFiles();
+            initStats();
+            initHomeSearch();
+        });
     </script>
 
 </body>
