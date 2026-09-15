@@ -493,28 +493,6 @@ button { cursor: pointer; border: none; background: none; }
     50%      { opacity: 0.7; filter: drop-shadow(0 4px 20px rgba(37, 99, 235, 0.6)); }
 }
 
-@media (max-width: 900px) {
-    .hero-float__item {
-        font-size: 24px !important;
-        opacity: 0.25;
-    }
-    .hero-float__item--4,
-    .hero-float__item--7,
-    .hero-float__item--8,
-    .hero-float__item--10 {
-        display: none;
-    }
-    .hero-float__particle {
-        opacity: 0.3;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-float {
-        display: none;
-    }
-}
-
 /* ===== بخش‌ها ===== */
 .section { padding: var(--sp-7) 0; }
 .section--alt { background-color: var(--bg-alt); }
@@ -585,20 +563,6 @@ button { cursor: pointer; border: none; background: none; }
 .student-concerns strong {
     color: var(--primary);
     font-weight: 700;
-}
-
-@media (max-width: 768px) {
-    .student-concerns {
-        padding: var(--sp-5) var(--sp-4);
-    }
-    .student-concerns p {
-        font-size: 14px;
-        line-height: 1.9;
-    }
-    .student-concerns::before {
-        font-size: 100px;
-        top: -20px;
-    }
 }
 
 /* ===== ویژگی‌ها ===== */
@@ -1237,6 +1201,37 @@ html[data-theme="dark"] .student-concerns::before {
     .footer__grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    /* ===== اصلاح انیمیشن روی تبلت و موبایل ===== */
+    .hero-float {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-float__item {
+        font-size: 22px !important;
+        opacity: 0.3;
+    }
+
+    .hero-float__item--1  { top: 8%;  right: 5%;  font-size: 26px !important; }
+    .hero-float__item--2  { top: 22%; right: 8%;  font-size: 20px !important; }
+    .hero-float__item--3  { top: 42%; right: 4%;  font-size: 20px !important; }
+    .hero-float__item--4  { top: 60%; right: 9%;  font-size: 20px !important; }
+    .hero-float__item--5  { top: 10%; left: 5%;   font-size: 26px !important; }
+    .hero-float__item--6  { top: 28%; left: 4%;   font-size: 20px !important; }
+    .hero-float__item--7  { top: 48%; left: 7%;   font-size: 20px !important; }
+    .hero-float__item--8  { top: 68%; left: 5%;   font-size: 20px !important; }
+
+    .hero-float__item--9,
+    .hero-float__item--10 {
+        display: none;
+    }
+
+    .hero-float__particle {
+        opacity: 0.3;
+    }
 }
 
 /* ============================================
@@ -1478,6 +1473,20 @@ html[data-theme="dark"] .student-concerns::before {
 
     .countdown__num { font-size: 18px; }
     .countdown__label { font-size: 9px; }
+
+    .student-concerns {
+        padding: var(--sp-5) var(--sp-4);
+    }
+
+    .student-concerns p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .student-concerns::before {
+        font-size: 100px;
+        top: -20px;
+    }
 }
 
 /* ============================================
@@ -1514,4 +1523,22 @@ html[data-theme="dark"] .student-concerns::before {
     }
 
     .footer__grid { grid-template-columns: 1fr; }
+
+    /* ===== اصلاح انیمیشن روی موبایل‌های کوچک ===== */
+    .hero-float__item {
+        font-size: 18px !important;
+        opacity: 0.25;
+    }
+
+    .hero-float__item--1  { top: 6%;  right: 4%;  font-size: 22px !important; }
+    .hero-float__item--2  { top: 20%; right: 6%;  font-size: 18px !important; }
+    .hero-float__item--3  { top: 40%; right: 3%;  font-size: 18px !important; }
+    .hero-float__item--5  { top: 8%;  left: 4%;   font-size: 22px !important; }
+    .hero-float__item--6  { top: 26%; left: 3%;   font-size: 18px !important; }
+    .hero-float__item--7  { top: 46%; left: 5%;   font-size: 18px !important; }
+
+    .hero-float__item--4,
+    .hero-float__item--8 {
+        display: none;
+    }
 }
