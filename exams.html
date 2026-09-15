@@ -171,13 +171,8 @@
             });
         }
 
-        if (navClose) {
-            navClose.addEventListener('click', closeMenu);
-        }
-
-        if (navOverlay) {
-            navOverlay.addEventListener('click', closeMenu);
-        }
+        if (navClose) navClose.addEventListener('click', closeMenu);
+        if (navOverlay) navOverlay.addEventListener('click', closeMenu);
 
         if (nav) {
             nav.querySelectorAll('.nav__link').forEach(link => {
@@ -202,7 +197,10 @@
                 '<span class="content-card__badge content-card__badge--' + file.color + '">' + file.category + '</span>' +
                 '<h2 class="content-card__title">' + file.title + '</h2>' +
                 '<p class="content-card__desc">' + file.desc + '</p>' +
-                '<div class="content-card__meta"><span>📎 PDF</span></div>' +
+                '<div class="content-card__meta">' +
+                    '<span>📎 PDF</span>' +
+                    (file.author ? '<span>✍️ ' + file.author + '</span>' : '') +
+                '</div>' +
                 '<div class="content-card__footer">' + buttons + '</div>' +
             '</article>';
         }

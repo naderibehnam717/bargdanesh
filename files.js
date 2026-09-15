@@ -31,5 +31,17 @@ const allFiles = [
         downloadUrl: "https://drive.google.com/uc?export=download&id=10TbXwsw7XGSbEHpTrzkAb9VZ1NRPWZnh",
         downloadName: "کتاب-اندیشه-اسلامی-1.pdf",
         color: "green"
-    }
+    },
+    {
+        title: "جزوه آمار و روش تحقیق در علوم انسانی",
+        desc: "جزوه اختصاصی برگ دانش — آمار، روش تحقیق، نمونه‌گیری، متغیرها، آزمون فرضیه و ...",
+        category: "روانشناسی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1GF_65KVpdGIksA0NfyAx8PPBxcFmnZ4f/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1GF_65KVpdGIksA0NfyAx8PPBxcFmnZ4f",
+        downloadName: "jozve-amar-ravash-tahghigh.pdf",
+        color: "purple"
+    },
 ];
