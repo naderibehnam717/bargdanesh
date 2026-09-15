@@ -1205,21 +1205,3 @@ html[data-theme="dark"] .footer {
 
     .footer__grid { grid-template-columns: 1fr; }
 }
-/* ===== لوگو ===== */
-.logo__img {
-    height: 50px;
-    width: auto;
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .logo__img {
-        height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo__img {
-        height: 35px;
-    }
-}
