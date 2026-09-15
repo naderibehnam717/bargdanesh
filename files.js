@@ -93,5 +93,113 @@ const allFiles = [
         downloadUrl: "https://drive.google.com/uc?export=download&id=1SmpFYokvs91iATrv_ks1LBJrFcsb2QJt",
         downloadName: "jozve-ravanshenasi-ejtemaei.pdf",
         color: "purple"
+    },
+    {
+        title: "جزوه تفکر، حل مسئله و خلاقیت",
+        desc: "تفکر انتقادی، تفکر خلاق، مراحل حل مسئله و پرورش خلاقیت",
+        category: "علوم تربیتی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1KYSK_RvPfJvTtitXfZzkyuyGbFahQ1R2/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1KYSK_RvPfJvTtitXfZzkyuyGbFahQ1R2",
+        downloadName: "jozve-tafakor-hal-masale.pdf",
+        color: "blue"
+    },
+    {
+        title: "جزوه انگیزش و نقش آن در یادگیری",
+        desc: "انگیزش درونی و بیرونی، خودکارآمدی و نقش معلم در افزایش انگیزه",
+        category: "علوم تربیتی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1gpxtW2iyurPpKk_UN0ymdsB4yfuc9lse/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1gpxtW2iyurPpKk_UN0ymdsB4yfuc9lse",
+        downloadName: "jozve-angizesh-yadgiri.pdf",
+        color: "green"
+    },
+    {
+        title: "جزوه رشد و تحول در آموزش",
+        desc: "ابعاد تحول، رابطه رشد و یادگیری و آموزش متناسب با سطح رشد",
+        category: "علوم تربیتی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1FCx0OKfAdECYAzPjvrA0nt1VVUZGkp1I/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1FCx0OKfAdECYAzPjvrA0nt1VVUZGkp1I",
+        downloadName: "jozve-roshd-tahavol.pdf",
+        color: "rose"
+    },
+    {
+        title: "جزوه تفاوت‌های فردی و شناخت یادگیرندگان",
+        desc: "تفاوت‌های شناختی، استعداد، سرعت یادگیری، سبک‌های یادگیری و تفاوت‌های عاطفی",
+        category: "علوم تربیتی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1ErLGgkEtA6shRmnx3wIXOLK1tM080eWN/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1ErLGgkEtA6shRmnx3wIXOLK1tM080eWN",
+        downloadName: "jozve-tafavot-fardi.pdf",
+        color: "purple"
+    },
+    {
+        title: "جزوه حافظه و فرایندهای یادگیری",
+        desc: "رمزگردانی، ذخیره‌سازی، بازیابی و روش‌های تقویت حافظه",
+        category: "علوم تربیتی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/140KnkfmsD7TRPIbUOWS0m1aauRoNuMfm/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=140KnkfmsD7TRPIbUOWS0m1aauRoNuMfm",
+        downloadName: "jozve-hafeze.pdf",
+        color: "blue"
+    },
+    {
+        title: "جزوه مفهوم یادگیری و نظریه‌های یادگیری",
+        desc: "رفتارگرایی، شناخت‌گرایی، یادگیری مشاهده‌ای و نظریه‌های پاولف، اسکینر و بندورا",
+        category: "علوم تربیتی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1gzztUqrD_cG9K4KbCnniVyWA2ddg0pvT/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1gzztUqrD_cG9K4KbCnniVyWA2ddg0pvT",
+        downloadName: "jozve-mafhoom-yadgiri.pdf",
+        color: "purple"
+    },
+    {
+        title: "جزوه روش‌ها و فنون تدریس",
+        desc: "روش‌های تدریس مستقیم، سخنرانی، پرسش و پاسخ، بحث گروهی، حل مسئله و یادگیری مشارکتی",
+        category: "علوم تربیتی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1p4_PvDQACtjAQ1Q_EfjDQw3jDi3t9b5q/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1p4_PvDQACtjAQ1Q_EfjDQw3jDi3t9b5q",
+        downloadName: "jozve-ravesh-fonoon-tadris.pdf",
+        color: "blue"
+    },
+    {
+        title: "جزوه مبانی و مفاهیم اساسی علوم تربیتی",
+        desc: "تعریف علوم تربیتی، تفاوت آموزش و تربیت، نقش معلم و یادگیرنده و عوامل مؤثر بر یادگیری",
+        category: "علوم تربیتی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1ldI9Wawz27sjHvULC_kHawWS01U9Ebe-/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1ldI9Wawz27sjHvULC_kHawWS01U9Ebe-",
+        downloadName: "jozve-mabani-oloom-tarbiati.pdf",
+        color: "green"
+    },
+    {
+        title: "جزوه ارزشیابی و سنجش آموزشی",
+        desc: "اندازه‌گیری، سنجش، ارزشیابی تشخیصی، تکوینی و پایانی و ابزارهای سنجش",
+        category: "علوم تربیتی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/13wvUg5DezDmRsEKSDD7tIbuZH3FCGSJT/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=13wvUg5DezDmRsEKSDD7tIbuZH3FCGSJT",
+        downloadName: "jozve-arzyabi-sanjesh.pdf",
+        color: "blue"
     }
 ];

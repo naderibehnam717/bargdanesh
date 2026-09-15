@@ -48,9 +48,7 @@
 
     <section class="hero">
 
-        <!-- ===== انیمیشن شناور Hero ===== -->
         <div class="hero-float" aria-hidden="true">
-            <!-- ذرات نور -->
             <span class="hero-float__particle hero-float__particle--1"></span>
             <span class="hero-float__particle hero-float__particle--2"></span>
             <span class="hero-float__particle hero-float__particle--3"></span>
@@ -58,7 +56,6 @@
             <span class="hero-float__particle hero-float__particle--5"></span>
             <span class="hero-float__particle hero-float__particle--6"></span>
 
-            <!-- آیکون‌های شناور -->
             <span class="hero-float__item hero-float__item--1">📚</span>
             <span class="hero-float__item hero-float__item--2">📖</span>
             <span class="hero-float__item hero-float__item--3">🍃</span>
@@ -115,7 +112,6 @@
                         <p class="section__subtitle">چیزی که ما را متفاوت می‌کند</p>
                     </div>
 
-                    <!-- ===== متن دغدغه‌ها ===== -->
                     <div class="student-concerns">
                         <p>
                             می‌دونیم که شب‌های قبل از امتحان چقدر سنگینن.
@@ -182,7 +178,7 @@
                             <div class="stat-item__label">📝 نمونه سوال</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-item__number" id="statArticles">0</div>
+                            <div class="stat-item__number" id="statArticles">۰</div>
                             <div class="stat-item__label">📄 مقاله</div>
                         </div>
                     </div>
@@ -190,7 +186,6 @@
 
                 <aside class="sidebar">
 
-                    <!-- ===== شمارش معکوس کنکور ===== -->
                     <div class="countdown">
                         <span class="countdown__badge">احتمالی</span>
                         <h3 class="countdown__title">⏳ تا کنکور سراسری</h3>
@@ -280,12 +275,13 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer__title">دسته‌بندی‌ها</h4>
+                    <h4 class="footer__title">موضوعات</h4>
                     <ul class="footer__list">
-                        <li><a href="notes.html">جزوه‌ها</a></li>
-                        <li><a href="books.html">کتاب‌ها</a></li>
-                        <li><a href="exams.html">نمونه سوال</a></li>
-                        <li><a href="articles.html">مقالات</a></li>
+                        <li><a href="psychology.html">روانشناسی</a></li>
+                        <li><a href="education.html">علوم تربیتی</a></li>
+                        <li><a href="computer.html">کامپیوتر</a></li>
+                        <li><a href="physics.html">فیزیک</a></li>
+                        <li><a href="islamic.html">معارف</a></li>
                     </ul>
                 </div>
                 <div>
@@ -303,7 +299,6 @@
     </footer>
 
     <script>
-        // ===== دارک مود =====
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
         const html = document.documentElement;
@@ -326,7 +321,6 @@
             }
         });
 
-        // ===== منوی موبایل =====
         const menuToggle = document.getElementById('menuToggle');
         const navClose = document.getElementById('navClose');
         const navOverlay = document.getElementById('navOverlay');
@@ -367,7 +361,6 @@
             });
         }
 
-        // ===== ساخت کارت =====
         function createCard(file) {
             var buttons = '';
             if (file.viewUrl) {
@@ -392,7 +385,6 @@
             '</article>';
         }
 
-        // ===== آخرین فایل‌ها =====
         function initLatestFiles() {
             const latestContainer = document.getElementById('latestFiles');
             if (latestContainer && typeof allFiles !== 'undefined') {
@@ -401,7 +393,6 @@
             }
         }
 
-        // ===== آمار سایت =====
         function initStats() {
             if (typeof allFiles === 'undefined') return;
 
@@ -418,7 +409,6 @@
             if (statExams) statExams.textContent = toFa(allFiles.filter(f => f.type === 'نمونه سوال').length);
         }
 
-        // ===== جستجوی صفحه اصلی =====
         function initHomeSearch() {
             const homeSearchForm = document.getElementById('homeSearchForm');
             const homeSearchInput = document.getElementById('homeSearchInput');
@@ -472,8 +462,6 @@
             }
         }
 
-        // ===== شمارش معکوس کنکور =====
-        // تاریخ احتمالی: ۱۱ تیر ۱۴۰۶ = 2027-07-02
         const konkurDate = new Date("2027-07-02T08:00:00").getTime();
 
         function toFaNum(n) {
