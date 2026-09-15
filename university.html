@@ -65,7 +65,6 @@
                 <p class="section__subtitle">رشته مورد نظرت را انتخاب کن</p>
             </div>
 
-            <!-- دسته‌بندی‌ها خودکار از files.js ساخته می‌شن -->
             <div class="cards-grid" id="categoriesGrid"></div>
 
         </div>
@@ -135,7 +134,6 @@
             }
         });
 
-        // ===== منوی موبایل =====
         const menuToggle = document.getElementById('menuToggle');
         const navClose = document.getElementById('navClose');
         const navOverlay = document.getElementById('navOverlay');
@@ -176,18 +174,13 @@
             });
         }
 
-        // ===== ساخت خودکار دسته‌بندی‌ها =====
         function buildCategories() {
             const grid = document.getElementById('categoriesGrid');
             if (!grid || typeof allFiles === 'undefined') return;
 
-            // فقط فایل‌های دانشگاهی
             const uniFiles = allFiles.filter(f => f.level === 'دانشگاهی');
-
-            // دسته‌های یکتا
             const categories = [...new Set(uniFiles.map(f => f.category))];
 
-            // آیکون‌های پیش‌فرض برای هر دسته
             const icons = {
                 'ریاضی': '📐',
                 'آمار': '📊',
@@ -197,7 +190,7 @@
                 'زیست‌شناسی': '🧬',
                 'مهندسی': '⚙️',
                 'کامپیوتر': '💻',
-                'معارف': '📚',
+                'معارف': '📿',
                 'روانشناسی': '🧠',
                 'زبان': '🌍',
                 'ادبیات': '📖',
@@ -214,6 +207,14 @@
                 'نمونه سوال': 'نمونه سوال'
             };
 
+            // نقشه‌ی دسته‌ها به صفحه‌های اختصاصی
+            const categoryPages = {
+                'روانشناسی': 'psychology.html',
+                'کامپیوتر': 'computer.html',
+                'فیزیک': 'physics.html',
+                'معارف': 'islamic.html'
+            };
+
             if (categories.length === 0) {
                 grid.innerHTML = '<p style="text-align: center; padding: 40px; color: #999; grid-column: 1 / -1;">هنوز فایلی اضافه نشده است.</p>';
                 return;
@@ -224,14 +225,7 @@
                 const types = [...new Set(filesInCat.map(f => f.type))];
                 const typesText = types.map(t => typeLabels[t] || t).join('، ');
 
-                // اگر فقط یه نوع فایل داشت، به همون صفحه بره
-                let href = 'notes.html';
-                if (types.length === 1) {
-                    if (types[0] === 'کتاب') href = 'books.html';
-                    else if (types[0] === 'نمونه سوال') href = 'exams.html';
-                    else href = 'notes.html';
-                }
-
+                const href = categoryPages[cat] || 'notes.html';
                 const icon = icons[cat] || '📁';
 
                 return '<a href="' + href + '" class="content-card">' +
@@ -242,7 +236,6 @@
             }).join('');
         }
 
-        // ===== جستجو =====
         const searchForm = document.querySelector('.js-search');
         const searchInput = document.querySelector('.js-search-input');
 

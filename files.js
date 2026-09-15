@@ -12,29 +12,31 @@ const allFiles = [
     },
     {
         title: "جزوه مبانی کامپیوتر و برنامه‌نویسی",
-        desc: "جزوه کامل مبانی کامپیوتر و برنامه‌نویسی C++ — دانشگاه صنعتی بیرجند",
+        desc: "مفاهیم پایه کامپیوتر، الگوریتم و برنامه‌نویسی C++",
         category: "کامپیوتر",
         type: "جزوه",
         level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
         viewUrl: "https://drive.google.com/file/d/15h2ylcOqKHGuvNsT1Yfdz0RezD21--jW/view",
         downloadUrl: "https://drive.google.com/uc?export=download&id=15h2ylcOqKHGuvNsT1Yfdz0RezD21--jW",
-        downloadName: "جزوه-مبانی-کامپیوتر.pdf",
+        downloadName: "jozve-mabani-computer.pdf",
         color: "blue"
     },
     {
         title: "کتاب اندیشه اسلامی ۱",
-        desc: "کتاب اندیشه اسلامی ۱ — آیت‌الله جعفر سبحانی و دکتر محمد محمدی",
+        desc: "کتاب مرجع اندیشه اسلامی — آیت‌الله جعفر سبحانی",
         category: "معارف",
         type: "کتاب",
         level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
         viewUrl: "https://drive.google.com/file/d/10TbXwsw7XGSbEHpTrzkAb9VZ1NRPWZnh/view",
         downloadUrl: "https://drive.google.com/uc?export=download&id=10TbXwsw7XGSbEHpTrzkAb9VZ1NRPWZnh",
-        downloadName: "کتاب-اندیشه-اسلامی-1.pdf",
+        downloadName: "ketab-andishe-islami-1.pdf",
         color: "green"
     },
     {
         title: "جزوه آمار و روش تحقیق در علوم انسانی",
-        desc: "جزوه اختصاصی برگ دانش — آمار، روش تحقیق، نمونه‌گیری، متغیرها، آزمون فرضیه و ...",
+        desc: "آمار توصیفی، استنباطی، روش‌های تحقیق و آزمون فرضیه",
         category: "روانشناسی",
         type: "جزوه",
         level: "دانشگاهی",
@@ -46,7 +48,7 @@ const allFiles = [
     },
     {
         title: "جزوه روانشناسی عمومی",
-        desc: "جزوه اختصاصی برگ دانش — تعریف روانشناسی، مکاتب، یادگیری، حافظه، هوش، شخصیت، انگیزش، رشد و ...",
+        desc: "مفاهیم پایه، مکاتب، یادگیری، حافظه، هوش و شخصیت",
         category: "روانشناسی",
         type: "جزوه",
         level: "دانشگاهی",
@@ -58,7 +60,7 @@ const allFiles = [
     },
     {
         title: "جزوه روانشناسی رشد",
-        desc: "جزوه اختصاصی برگ دانش — رشد پیش از تولد، نوزادی، کودکی، نوجوانی، بزرگسالی، سالمندی و نظریه‌های مهم رشد",
+        desc: "مراحل رشد انسان از تولد تا سالمندی و نظریه‌های مهم رشد",
         category: "روانشناسی",
         type: "جزوه",
         level: "دانشگاهی",
@@ -70,7 +72,7 @@ const allFiles = [
     },
     {
         title: "جزوه روانشناسی شخصیت",
-        desc: "جزوه اختصاصی برگ دانش — نظریه‌های فروید، آدلر، یونگ، اریکسون، بندورا، مازلو، راجرز و مدل پنج عامل بزرگ",
+        desc: "نظریه‌های فروید، یونگ، آدلر، مازلو، راجرز و مدل پنج عامل بزرگ",
         category: "روانشناسی",
         type: "جزوه",
         level: "دانشگاهی",
@@ -82,7 +84,7 @@ const allFiles = [
     },
     {
         title: "جزوه روانشناسی اجتماعی",
-        desc: "جزوه اختصاصی برگ دانش — نگرش، نفوذ اجتماعی، همرنگی، اطاعت، گروه‌ها، رهبری، جاذبه و پیش‌داوری",
+        desc: "نگرش، نفوذ اجتماعی، همرنگی، اطاعت، گروه‌ها و پیش‌داوری",
         category: "روانشناسی",
         type: "جزوه",
         level: "دانشگاهی",
@@ -91,5 +93,5 @@ const allFiles = [
         downloadUrl: "https://drive.google.com/uc?export=download&id=1SmpFYokvs91iATrv_ks1LBJrFcsb2QJt",
         downloadName: "jozve-ravanshenasi-ejtemaei.pdf",
         color: "purple"
-    },
+    }
 ];
