@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقالات | برگ دانش</title>
+    <meta name="description" content="مقالات علمی و پژوهشی — برگ دانش">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== هدر ===== -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8 2 5 5 5 9c0 3 2 5.5 5 6.5V19l-2 2h8l-2-2v-3.5c3-1 5-3.5 5-6.5 0-4-3-7-7-7z" fill="white" opacity="0.95"/>
+                        <path d="M12 4v10" stroke="#2563eb" stroke-width="0.8" stroke-linecap="round"/>
+                        <path d="M9 7l3 2M15 7l-3 2M9 11l3 2M15 11l-3 2" stroke="#2563eb" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
+                    </svg>
+                </span>
+                <span class="logo__text">برگ دانش</span>
+            </a>
+
+            <nav class="nav">
+                <a href="index.html" class="nav__link">خانه</a>
+                <a href="university.html" class="nav__link">دانشگاهی</a>
+                <a href="school.html" class="nav__link">مدرسه‌ای</a>
+                <a href="exams.html" class="nav__link">نمونه سوال</a>
+                <a href="articles.html" class="nav__link nav__link--active">مقالات</a>
+                <a href="books.html" class="nav__link">کتاب‌ها</a>
+            </nav>
+
+            <div class="header__actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="theme-toggle__icon">🌙</span>
+                </button>
+                <a href="#" class="btn btn--ghost">ورود</a>
+                <a href="#" class="btn btn--primary">ثبت‌نام</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="منو">☰</button>
+        </div>
+    </header>
+
+    <!-- ===== عنوان صفحه ===== -->
+    <section class="page-header">
+        <div class="container page-header__inner">
+            <h1 class="page-header__title">📄 مقالات</h1>
+            <p class="page-header__subtitle">مقالات علمی و پژوهشی در رشته‌های مختلف</p>
+        </div>
+    </section>
+
+    <!-- ===== محتوا ===== -->
+    <main class="section">
+        <div class="container">
+
+            <form class="search-box js-search" action="#" method="get">
+                <input type="text" class="search-box__input js-search-input" name="search" placeholder="موضوع مورد نظر را جستجو کنید...">
+                <button type="submit" class="btn btn--primary">🔍 جستجو</button>
+            </form>
+
+            <div class="filter-bar">
+                <a href="#" class="filter-bar__item filter-bar__item--active">همه</a>
+                <a href="#" class="filter-bar__item">روانشناسی</a>
+                <a href="#" class="filter-bar__item">علوم تربیتی</a>
+                <a href="#" class="filter-bar__item">جامعه‌شناسی</a>
+                <a href="#" class="filter-bar__item">زبان انگلیسی</a>
+            </div>
+
+            <div class="cards-grid js-cards">
+
+                <article class="content-card">
+                    <span class="content-card__badge content-card__badge--blue">روانشناسی</span>
+                    <h2 class="content-card__title">روانشناسی چیست؟ تعریف، مباحث و کاربردها</h2>
+                    <p class="content-card__desc">
+                        روانشناسی علمی است که رفتار و فرایندهای ذهنی انسان را بررسی می‌کند. این علم موضوعاتی مانند یادگیری، حافظه، هیجان، شخصیت و رفتار اجتماعی را شامل می‌شود.
+                    </p>
+                    <div class="content-card__meta">
+                        <span>📅 ۲ روز پیش</span>
+                        <span>⏱️ ۵ دقیقه مطالعه</span>
+                    </div>
+                    <div class="content-card__footer">
+                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
+                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <span class="content-card__badge content-card__badge--green">علوم تربیتی</span>
+                    <h2 class="content-card__title">اهمیت مطالعه منظم در یادگیری</h2>
+                    <p class="content-card__desc">
+                        مطالعه منظم می‌تواند به افزایش دانش، تقویت حافظه و بهبود فرایند یادگیری کمک کند. در این مقاله به بررسی روش‌های موثر مطالعه می‌پردازیم.
+                    </p>
+                    <div class="content-card__meta">
+                        <span>📅 ۵ روز پیش</span>
+                        <span>⏱️ ۷ دقیقه مطالعه</span>
+                    </div>
+                    <div class="content-card__footer">
+                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
+                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <span class="content-card__badge content-card__badge--purple">جامعه‌شناسی</span>
+                    <h2 class="content-card__title">مبانی جامعه‌شناسی و کاربردهای آن</h2>
+                    <p class="content-card__desc">
+                        جامعه‌شناسی به مطالعه رفتار اجتماعی انسان‌ها و ساختارهای اجتماعی می‌پردازد. آشنایی با این علم برای درک بهتر جامعه ضروری است.
+                    </p>
+                    <div class="content-card__meta">
+                        <span>📅 ۱ هفته پیش</span>
+                        <span>⏱️ ۶ دقیقه مطالعه</span>
+                    </div>
+                    <div class="content-card__footer">
+                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
+                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <span class="content-card__badge content-card__badge--rose">زبان انگلیسی</span>
+                    <h2 class="content-card__title">روش‌های تقویت مکالمه زبان انگلیسی</h2>
+                    <p class="content-card__desc">
+                        تقویت مکالمه زبان انگلیسی نیازمند تمرین مداوم و استفاده از روش‌های صحیح است. در این مقاله بهترین روش‌ها را بررسی می‌کنیم.
+                    </p>
+                    <div class="content-card__meta">
+                        <span>📅 ۱ هفته پیش</span>
+                        <span>⏱️ ۸ دقیقه مطالعه</span>
+                    </div>
+                    <div class="content-card__footer">
+                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
+                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <span class="content-card__badge content-card__badge--blue">روانشناسی</span>
+                    <h2 class="content-card__title">روانشناسی رشد در کودکان</h2>
+                    <p class="content-card__desc">
+                        روانشناسی رشد به بررسی تغییرات رفتاری و ذهنی انسان در طول زندگی می‌پردازد. آشنایی با مراحل رشد کودک اهمیت زیادی دارد.
+                    </p>
+                    <div class="content-card__meta">
+                        <span>📅 ۲ هفته پیش</span>
+                        <span>⏱️ ۱۰ دقیقه مطالعه</span>
+                    </div>
+                    <div class="content-card__footer">
+                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
+                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <span class="content-card__badge content-card__badge--green">علوم تربیتی</span>
+                    <h2 class="content-card__title">نقش معلم در فرایند یادگیری</h2>
+                    <p class="content-card__desc">
+                        معلم به عنوان راهنما در فرایند یادگیری نقش کلیدی دارد. بررسی این نقش می‌تواند به بهبود آموزش کمک کند.
+                    </p>
+                    <div class="content-card__meta">
+                        <span>📅 ۲ هفته پیش</span>
+                        <span>⏱️ ۵ دقیقه مطالعه</span>
+                    </div>
+                    <div class="content-card__footer">
+                        <span class="content-card__meta">✍️ تیم برگ دانش</span>
+                        <a href="article.html" class="btn btn--outline btn--sm">ادامه مطلب</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== فوتر ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <div class="logo logo--light">
+                        <span class="logo__icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8 2 5 5 5 9c0 3 2 5.5 5 6.5V19l-2 2h8l-2-2v-3.5c3-1 5-3.5 5-6.5 0-4-3-7-7-7z" fill="white" opacity="0.95"/>
+                                <path d="M12 4v10" stroke="#2563eb" stroke-width="0.8" stroke-linecap="round"/>
+                                <path d="M9 7l3 2M15 7l-3 2M9 11l3 2M15 11l-3 2" stroke="#2563eb" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">برگ دانش</span>
+                    </div>
+                    <p class="footer__desc">
+                        مرجع دانلود جزوه، کتاب و مقاله دانشگاهی.<br>
+                        <strong style="color:#fff;">دانش، یک برگ فاصله دارد.</strong>
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__title">دسترسی سریع</h4>
+                    <ul class="footer__list">
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="university.html">دانشگاهی</a></li>
+                        <li><a href="school.html">مدرسه‌ای</a></li>
+                        <li><a href="exams.html">نمونه سوال</a></li>
+                        <li><a href="articles.html">مقالات</a></li>
+                        <li><a href="books.html">کتاب‌ها</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__title">دسته‌بندی‌ها</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">روانشناسی</a></li>
+                        <li><a href="#">علوم تربیتی</a></li>
+                        <li><a href="#">جامعه‌شناسی</a></li>
+                        <li><a href="#">زبان انگلیسی</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__title">ارتباط با ما</h4>
+                    <ul class="footer__list">
+                        <li>📧 info@baghdanesh.ir</li>
+                        <li>📱 ۰۹۱۲۳۴۵۶۷۸۹</li>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© ۱۴۰۳ برگ دانش — تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            themeIcon.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                html.removeAttribute('data-theme');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        const searchForm = document.querySelector('.js-search');
+        const searchInput = document.querySelector('.js-search-input');
+        const cards = document.querySelectorAll('.content-card');
+
+        if (searchForm && searchInput) {
+            searchForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+            });
+
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.trim().toLowerCase();
+                cards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if (text.includes(query)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.querySelector('.nav');
+
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('nav--open');
+                const isOpen = nav.classList.contains('nav--open');
+                menuToggle.textContent = isOpen ? '✕' : '☰';
+            });
+
+            nav.querySelectorAll('.nav__link').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('nav--open');
+                    menuToggle.textContent = '☰';
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

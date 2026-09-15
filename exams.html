@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نمونه سوال | برگ دانش</title>
+    <meta name="description" content="نمونه سوالات دانشگاهی و مدرسه‌ای">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__icon">📚</span>
+                <span>برگ دانش</span>
+            </a>
+
+            <nav class="nav">
+                <a href="index.html" class="nav__link">خانه</a>
+                <a href="university.html" class="nav__link">دانشگاهی</a>
+                <a href="school.html" class="nav__link">مدرسه ای</a>
+                <a href="exams.html" class="nav__link nav__link--active">نمونه سوال</a>
+                <a href="articles.html" class="nav__link">مقالات</a>
+                <a href="books.html" class="nav__link">کتاب‌ها</a>
+            </nav>
+
+            <div class="header__actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="theme-toggle__icon">🌙</span>
+                </button>
+                <a href="#" class="btn btn--ghost">ورود</a>
+                <a href="#" class="btn btn--primary">ثبت‌نام</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container page-header__inner">
+            <h1 class="page-header__title">📝 نمونه سوال</h1>
+            <p class="page-header__subtitle">آرشیو نمونه سوالات دانشگاهی و مدرسه ای</p>
+        </div>
+    </section>
+
+    <main class="section">
+        <div class="container">
+
+            <form class="search-box js-search" action="#" method="get">
+                <input type="text" class="search-box__input js-search-input" name="search" placeholder="جستجوی نمونه سوال...">
+                <button type="submit" class="btn btn--primary">🔍 جستجو</button>
+            </form>
+
+            <div class="section__header">
+                <h2 class="section__title">🎓 نمونه سوال دانشگاهی</h2>
+            </div>
+
+            <div class="cards-grid js-cards" data-type="نمونه سوال" data-level="دانشگاهی" style="margin-bottom: 48px;"></div>
+
+            <div class="section__header">
+                <h2 class="section__title">🏫 نمونه سوال مدرسه ای</h2>
+            </div>
+
+            <div class="cards-grid js-cards" data-type="نمونه سوال" data-level="مدرسه ای"></div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <div class="logo logo--light">
+                        <span class="logo__icon">📚</span>
+                        <span>برگ دانش</span>
+                    </div>
+                    <p class="footer__desc">مرجع دانلود جزوه، کتاب و مقاله دانشگاهی.</p>
+                </div>
+                <div>
+                    <h4 class="footer__title">دسترسی سریع</h4>
+                    <ul class="footer__list">
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="exams.html">نمونه سوال</a></li>
+                        <li><a href="books.html">کتاب‌ها</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title">ارتباط با ما</h4>
+                    <ul class="footer__list">
+                        <li>📧 info@baghdanesh.ir</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title">درباره</h4>
+                    <ul class="footer__list">
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© ۱۴۰۳ برگ دانش</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="files.js"></script>
+
+    <script>
+        // ===== دارک مود =====
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            themeIcon.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // ===== منوی موبایل =====
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.querySelector('.nav');
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('nav--open');
+                menuToggle.textContent = nav.classList.contains('nav--open') ? '✕' : '☰';
+            });
+        }
+
+        // ===== ساخت کارت‌ها =====
+        function createCard(file) {
+            var buttons = '';
+            if (file.viewUrl) {
+                buttons += '<a href="' + file.viewUrl + '" target="_blank" class="btn btn--primary btn--sm">مشاهده</a>';
+            }
+            if (file.downloadUrl) {
+                buttons += '<a href="' + file.downloadUrl + '" download="' + file.downloadName + '" class="btn btn--outline btn--sm">دانلود</a>';
+            }
+            if (!file.viewUrl && !file.downloadUrl) {
+                buttons = '<span style="color: #999; font-size: 13px;">به‌زودی...</span>';
+            }
+
+            return '<article class="content-card">' +
+                '<span class="content-card__badge content-card__badge--' + file.color + '">' + file.category + '</span>' +
+                '<h2 class="content-card__title">' + file.title + '</h2>' +
+                '<p class="content-card__desc">' + file.desc + '</p>' +
+                '<div class="content-card__meta"><span>📎 PDF</span></div>' +
+                '<div class="content-card__footer">' + buttons + '</div>' +
+            '</article>';
+        }
+
+        document.querySelectorAll('.js-cards').forEach(function(container) {
+            var type = container.dataset.type;
+            var level = container.dataset.level;
+            var filtered = allFiles.filter(function(file) {
+                return file.type === type && file.level === level;
+            });
+            if (filtered.length === 0) {
+                container.innerHTML = '<p style="text-align: center; padding: 40px; color: #999;">فایلی موجود نیست</p>';
+            } else {
+                container.innerHTML = filtered.map(createCard).join('');
+            }
+        });
+
+        // ===== جستجوی زنده =====
+        const searchForm = document.querySelector('.js-search');
+        const searchInput = document.querySelector('.js-search-input');
+
+        if (searchForm && searchInput) {
+            searchForm.addEventListener('submit', (e) => e.preventDefault());
+
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.trim().toLowerCase();
+                const cards = document.querySelectorAll('.content-card');
+                let found = 0;
+
+                cards.forEach(card => {
+                    const match = card.textContent.toLowerCase().includes(query);
+                    card.style.display = match ? '' : 'none';
+                    if (match) found++;
+                });
+
+                // پیام "نتیجه‌ای پیدا نشد"
+                let noResult = document.querySelector('.no-result');
+                if (found === 0 && query) {
+                    if (!noResult) {
+                        noResult = document.createElement('p');
+                        noResult.className = 'no-result';
+                        noResult.style.cssText = 'text-align: center; padding: 40px; color: #999;';
+                        noResult.textContent = 'نتیجه‌ای پیدا نشد 🔍';
+                        document.querySelector('main .container').appendChild(noResult);
+                    }
+                } else if (noResult) {
+                    noResult.remove();
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
