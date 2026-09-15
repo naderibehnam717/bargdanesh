@@ -425,7 +425,6 @@ button { cursor: pointer; border: none; background: none; }
     z-index: 0;
 }
 
-/* ===== ذرات نور ===== */
 .hero-float__particle {
     position: absolute;
     width: 6px;
@@ -450,7 +449,6 @@ button { cursor: pointer; border: none; background: none; }
     75%      { transform: translate(-8px, -15px) scale(1.2); opacity: 0.7; }
 }
 
-/* ===== آیکون‌های شناور ===== */
 .hero-float__item {
     position: absolute;
     display: inline-flex;
@@ -918,6 +916,54 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 /* ============================================
+   فیلتر دسته‌بندی (Filter Bar)
+   ============================================ */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    justify-content: center;
+    margin-bottom: var(--sp-6);
+    padding: var(--sp-2);
+    background-color: var(--card);
+    border-radius: var(--r-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-xs);
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filter-bar__item {
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-soft);
+    background-color: transparent;
+    border-radius: var(--r-full);
+    transition: var(--transition);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.filter-bar__item:hover {
+    background-color: var(--primary-soft);
+    color: var(--primary);
+}
+
+.filter-bar__item--active {
+    background-color: var(--primary);
+    color: #fff;
+    box-shadow: var(--shadow-primary);
+}
+
+.filter-bar__item--active:hover {
+    background-color: var(--primary-dark);
+    color: #fff;
+}
+
+/* ============================================
    Sidebar — نوار کناری
    ============================================ */
 
@@ -1120,6 +1166,81 @@ button { cursor: pointer; border: none; background: none; }
     z-index: 1;
 }
 
+/* ============================================
+   صفحه‌ی اختصاصی موضوع (Subject Page)
+   ============================================ */
+
+.subject-hero {
+    padding: var(--sp-8) 0 var(--sp-7);
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-soft) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.subject-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.subject-hero__title {
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    line-height: 1.2;
+    margin-bottom: var(--sp-3);
+    font-family: 'Vazirmatn', sans-serif;
+    direction: ltr;
+    position: relative;
+    z-index: 1;
+    min-height: 80px;
+}
+
+.subject-hero__subtitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    position: relative;
+    z-index: 1;
+}
+
+.subject-intro {
+    background-color: var(--card);
+    border-radius: var(--r-lg);
+    border: 1px solid var(--border);
+    border-right: 4px solid var(--primary);
+    padding: var(--sp-6);
+    margin-bottom: var(--sp-6);
+    box-shadow: var(--shadow-sm);
+}
+
+.subject-intro__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: var(--sp-4);
+}
+
+.subject-intro__text {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--text-soft);
+    margin-bottom: var(--sp-3);
+}
+
+.subject-intro__text:last-child {
+    margin-bottom: 0;
+}
+
 /* ===== Dark Mode ===== */
 html[data-theme="dark"] {
     --bg: #0f172a;
@@ -1176,6 +1297,11 @@ html[data-theme="dark"] .student-concerns::before {
     color: #1e3a5f;
 }
 
+html[data-theme="dark"] .filter-bar {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
 /* ============================================
    ریسپانسیو — تبلت
    ============================================ */
@@ -1202,7 +1328,6 @@ html[data-theme="dark"] .student-concerns::before {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* ===== اصلاح انیمیشن روی تبلت و موبایل ===== */
     .hero-float {
         position: absolute;
         inset: 0;
@@ -1487,6 +1612,43 @@ html[data-theme="dark"] .student-concerns::before {
         font-size: 100px;
         top: -20px;
     }
+
+    .subject-hero {
+        padding: var(--sp-6) 0 var(--sp-5);
+    }
+
+    .subject-hero__title {
+        font-size: 36px;
+        letter-spacing: 4px;
+        min-height: 50px;
+    }
+
+    .subject-hero__subtitle {
+        font-size: 16px;
+    }
+
+    .subject-intro {
+        padding: var(--sp-5) var(--sp-4);
+    }
+
+    .subject-intro__title {
+        font-size: 17px;
+    }
+
+    .subject-intro__text {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .filter-bar {
+        gap: var(--sp-1);
+        padding: var(--sp-2);
+    }
+
+    .filter-bar__item {
+        padding: 7px 16px;
+        font-size: 13px;
+    }
 }
 
 /* ============================================
@@ -1524,7 +1686,6 @@ html[data-theme="dark"] .student-concerns::before {
 
     .footer__grid { grid-template-columns: 1fr; }
 
-    /* ===== اصلاح انیمیشن روی موبایل‌های کوچک ===== */
     .hero-float__item {
         font-size: 18px !important;
         opacity: 0.25;
@@ -1541,115 +1702,7 @@ html[data-theme="dark"] .student-concerns::before {
     .hero-float__item--8 {
         display: none;
     }
-}
-/* ============================================
-   صفحه‌ی اختصاصی موضوع (Subject Page)
-   ============================================ */
 
-/* ===== هدر با انیمیشن ===== */
-.subject-hero {
-    padding: var(--sp-8) 0 var(--sp-7);
-    text-align: center;
-    background: linear-gradient(135deg, var(--primary-soft) 0%, var(--bg) 100%);
-    border-bottom: 1px solid var(--border);
-    position: relative;
-    overflow: hidden;
-}
-
-.subject-hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.subject-hero__title {
-    font-size: 64px;
-    font-weight: 900;
-    letter-spacing: 8px;
-    line-height: 1.2;
-    margin-bottom: var(--sp-3);
-    font-family: 'Vazirmatn', sans-serif;
-    direction: ltr;
-    position: relative;
-    z-index: 1;
-    min-height: 80px;
-}
-
-.subject-hero__subtitle {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--primary-dark);
-    position: relative;
-    z-index: 1;
-}
-
-/* ===== توضیح درباره موضوع ===== */
-.subject-intro {
-    background-color: var(--card);
-    border-radius: var(--r-lg);
-    border: 1px solid var(--border);
-    border-right: 4px solid var(--primary);
-    padding: var(--sp-6);
-    margin-bottom: var(--sp-6);
-    box-shadow: var(--shadow-sm);
-}
-
-.subject-intro__title {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: var(--sp-4);
-}
-
-.subject-intro__text {
-    font-size: 15px;
-    line-height: 2;
-    color: var(--text-soft);
-    margin-bottom: var(--sp-3);
-}
-
-.subject-intro__text:last-child {
-    margin-bottom: 0;
-}
-
-/* ===== ریسپانسیو ===== */
-@media (max-width: 768px) {
-    .subject-hero {
-        padding: var(--sp-6) 0 var(--sp-5);
-    }
-
-    .subject-hero__title {
-        font-size: 36px;
-        letter-spacing: 4px;
-        min-height: 50px;
-    }
-
-    .subject-hero__subtitle {
-        font-size: 16px;
-    }
-
-    .subject-intro {
-        padding: var(--sp-5) var(--sp-4);
-    }
-
-    .subject-intro__title {
-        font-size: 17px;
-    }
-
-    .subject-intro__text {
-        font-size: 14px;
-        line-height: 1.9;
-    }
-}
-
-@media (max-width: 480px) {
     .subject-hero__title {
         font-size: 28px;
         letter-spacing: 2px;
