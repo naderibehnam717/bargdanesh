@@ -28,7 +28,7 @@
                 <a href="school.html" class="nav__link">مدرسه ای</a>
                 <a href="exams.html" class="nav__link">نمونه سوال</a>
                 <a href="articles.html" class="nav__link">مقالات</a>
-                <a href="books.html" class="nav__link">کتاب‌ها</a>
+                <a href="books.html" class="nav__link">کتاب‌های غیر درسی</a>
             </nav>
 
             <div class="header__actions">
@@ -107,6 +107,7 @@
         <div class="container">
             <div class="layout-with-sidebar">
                 <div>
+
                     <div class="section__header">
                         <h2 class="section__title">چرا برگ دانش؟</h2>
                         <p class="section__subtitle">چیزی که ما را متفاوت می‌کند</p>
@@ -184,8 +185,10 @@
                     </div>
                 </div>
 
+                <!-- ستون کنار: Sidebar -->
                 <aside class="sidebar">
 
+                    <!-- ===== شمارش معکوس کنکور ===== -->
                     <div class="countdown">
                         <span class="countdown__badge">احتمالی</span>
                         <h3 class="countdown__title">⏳ تا کنکور سراسری</h3>
@@ -210,6 +213,27 @@
                         <p class="countdown__note">📅 ۱۱ تیر ۱۴۰۶ — ممکنه تغییر کنه</p>
                     </div>
 
+                    <!-- ===== اسلایدر جملات ===== -->
+                    <div class="quotes-slider">
+                        <div class="quotes-slider__stars" aria-hidden="true">
+                            <span class="quotes-slider__star quotes-slider__star--1">✨</span>
+                            <span class="quotes-slider__star quotes-slider__star--2">💫</span>
+                            <span class="quotes-slider__star quotes-slider__star--3">🌟</span>
+                            <span class="quotes-slider__star quotes-slider__star--4">⭐</span>
+                            <span class="quotes-slider__star quotes-slider__star--5">✨</span>
+                            <span class="quotes-slider__star quotes-slider__star--6">💫</span>
+                            <span class="quotes-slider__star quotes-slider__star--7">📚</span>
+                            <span class="quotes-slider__star quotes-slider__star--8">🍃</span>
+                        </div>
+
+                        <div class="quotes-slider__inner">
+                            <span class="quotes-slider__icon">💡</span>
+                            <p class="quotes-slider__text" id="quoteText">در حال بارگذاری...</p>
+                            <p class="quotes-slider__author" id="quoteAuthor"></p>
+                        </div>
+                    </div>
+
+                    <!-- ===== لینک‌های مفید ===== -->
                     <h3 class="sidebar__title">🔗 لینک‌های مفید</h3>
                     <ul class="sidebar__list">
                         <li class="sidebar__section">🏫 آموزش و پرورش</li>
@@ -235,6 +259,7 @@
         </div>
     </section>
 
+    <!-- ===== CTA ===== -->
     <section class="section">
         <div class="container">
             <div class="cta">
@@ -250,6 +275,7 @@
         </div>
     </section>
 
+    <!-- ===== فوتر ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -293,7 +319,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>© 1405 - برگ دانش ، تمامی حقوق محفوظ است</p>
+                <p>© ۱۴۰۳ برگ دانش — تمامی حقوق محفوظ است.</p>
             </div>
         </div>
     </footer>
@@ -498,12 +524,97 @@
             secsEl.textContent = toFaNum(secs);
         }
 
+        const quotes = [
+            { text: "دانش، قدرت است.", author: "فرانسیس بیکن" },
+            { text: "هرگز برای یادگیری دیر نیست.", author: "ضرب‌المثل" },
+            { text: "موفقیت، مجموع تلاش‌های کوچک روزانه است.", author: "رابرت کولیر" },
+            { text: "آینده از آنِ کسانی است که به رویاهایشان ایمان دارند.", author: "النور روزولت" },
+            { text: "بزرگ‌ترین افتخار ما در زمین این نیست که هرگز شکست نخوریم، بلکه در این است که هر بار شکست خوردیم، برخیزیم.", author: "کنفوسیوس" },
+            { text: "کسی که می‌خواند، هزار زندگی را تجربه می‌کند؛ کسی که نمی‌خواند، فقط یکی.", author: "جورج آر. آر. مارتین" },
+            { text: "بدون دانش، هرگز نمی‌توان به آزادی واقعی رسید.", author: "افلاطون" },
+            { text: "علم، سلاح قدرتمندی است که آینده را می‌سازد.", author: "ماری کوری" },
+            { text: "تلاش کن نه برای اینکه موفق شوی، بلکه برای اینکه ارزشمند باشی.", author: "آلبرت انیشتین" },
+            { text: "تنها راه انجام کارهای بزرگ، عشق به کاری است که انجام می‌دهی.", author: "استیو جابز" },
+            { text: "آنکه در پی دانش است، هرگز تنها نیست.", author: "ضرب‌المثل" },
+            { text: "تفکر، آغاز همه‌ی آفرینش‌هاست.", author: "افلاطون" },
+            { text: "هر کتاب، یک سفر به سرزمین ناشناخته‌هاست.", author: "ضرب‌المثل" },
+            { text: "کسی که خود را می‌شناسد، جهان را می‌شناسد.", author: "سقراط" },
+            { text: "علم بدون عمل، مانند درختی است که میوه نمی‌دهد.", author: "ضرب‌المثل" },
+            { text: "در دل هر سختی، فرصتی نهفته است.", author: "آلبرت انیشتین" },
+            { text: "زندگی، همانند دوچرخه‌سواری است؛ برای حفظ تعادل باید حرکت کنی.", author: "آلبرت انیشتین" },
+            { text: "تنها راه پیشرفت، یادگیری مداوم است.", author: "برایان تریسی" },
+            { text: "زمانی که مطالعه می‌کنی، ذهن خود را آزاد می‌کنی.", author: "ضرب‌المثل" },
+            { text: "خودت را باور کن و هرگز تسلیم نشو.", author: "مایکل جردن" },
+            { text: "مطالعه، کلید درهای بسته‌ی ذهن است.", author: "ضرب‌المثل" },
+            { text: "هدف بدون برنامه، فقط یک آرزوست.", author: "آنتوان دو سنت اگزوپری" },
+            { text: "بزرگ‌ترین سرمایه‌ی انسان، ذهن اوست.", author: "ضرب‌المثل" },
+            { text: "دانش را با کسی که نمی‌داند، تقسیم کن؛ این خودش یادگیری است.", author: "ضرب‌المثل" },
+            { text: "هیچ‌وقت از یادگیری دست نکش؛ زندگی مدرسه‌ای بی‌پایان است.", author: "ضرب‌المثل" },
+            { text: "علم، چراغ راه زندگی است.", author: "ضرب‌المثل" },
+            { text: "آنچه را که می‌آموزی، به کار ببند؛ این خودش بزرگ‌ترین موفقیت است.", author: "ضرب‌المثل" },
+            { text: "هر روز، فرصتی برای بهتر شدن است.", author: "ضرب‌المثل" },
+            { text: "در زندگی، مهم این نیست که چه اندازه می‌دانی؛ مهم این است که چه اندازه عمل می‌کنی.", author: "ضرب‌المثل" },
+            { text: "کتاب، بهترین دوست انسان است.", author: "ضرب‌المثل" },
+            { text: "دانش، گنجی است که هرگز تمام نمی‌شود.", author: "ضرب‌المثل" },
+            { text: "هر کس چیزی برای یاد دادن دارد و هر کس چیزی برای یاد گرفتن.", author: "ضرب‌المثل" },
+            { text: "بزرگ‌ترین دشمن پیشرفت، ترس از شکست است.", author: "ضرب‌المثل" },
+            { text: "با پشتکار، هیچ چیز غیرممکن نیست.", author: "ضرب‌المثل" },
+            { text: "دانستن، نصف راه است؛ عمل کردن، نیمه‌ی دیگر.", author: "ضرب‌المثل" },
+            { text: "هدف‌های بزرگ، با گام‌های کوچک ساخته می‌شوند.", author: "ضرب‌المثل" },
+            { text: "آن که به دانش خود افتخار می‌کند، از یادگیری باز می‌ماند.", author: "ضرب‌المثل" },
+            { text: "امروز کارت را انجام بده؛ فردا دیر است.", author: "ضرب‌المثل" },
+            { text: "سرمایه‌گذاری روی خود، بهترین سرمایه‌گذاری است.", author: "وارن بافت" },
+            { text: "تنها محدودیت تو، ذهن خودت است.", author: "ضرب‌المثل" },
+            { text: "هر شکست، پله‌ای برای موفقیت است.", author: "ضرب‌المثل" },
+            { text: "دانش، نوری است که هرگز خاموش نمی‌شود.", author: "ضرب‌المثل" },
+            { text: "زندگی، بهترین معلم است؛ به شرطی که شاگرد خوبی باشی.", author: "ضرب‌المثل" },
+            { text: "با دانش، مرزها را جابه‌جا کن.", author: "ضرب‌المثل" },
+            { text: "هر روز که می‌گذرد، فرصتی برای یادگیری چیزهای جدید است.", author: "ضرب‌المثل" },
+            { text: "علم، ارزشمندترین گنجی است که هیچ‌کس نمی‌تواند از تو بگیرد.", author: "ضرب‌المثل" },
+            { text: "کتاب بخوان، تا دنیای بزرگ‌تری ببینی.", author: "ضرب‌المثل" },
+            { text: "بهترین زمان برای کاشتن درخت، بیست سال پیش بود؛ دومین زمان، همین حالاست.", author: "ضرب‌المثل چینی" },
+            { text: "موفقیت، نتیجه‌ی تلاش‌های کوچک روزانه است.", author: "ضرب‌المثل" },
+            { text: "دانش، آزادی می‌آورد؛ جهل، اسارت.", author: "ضرب‌المثل" },
+            { text: "تنها چیزی که بین تو و رویاهات ایستاده، خودت هستی.", author: "ضرب‌المثل" }
+        ];
+
+        let currentQuote = 0;
+
+        function showQuote() {
+            const textEl = document.getElementById('quoteText');
+            const authorEl = document.getElementById('quoteAuthor');
+            if (!textEl || !authorEl) return;
+
+            const quote = quotes[currentQuote];
+
+            textEl.style.opacity = '0';
+            textEl.style.transform = 'translateY(10px)';
+            authorEl.style.opacity = '0';
+            authorEl.style.transform = 'translateY(10px)';
+
+            setTimeout(function() {
+                textEl.textContent = quote.text;
+                authorEl.textContent = '— ' + quote.author;
+                textEl.style.opacity = '1';
+                textEl.style.transform = 'translateY(0)';
+                authorEl.style.opacity = '1';
+                authorEl.style.transform = 'translateY(0)';
+            }, 500);
+
+            currentQuote = (currentQuote + 1) % quotes.length;
+        }
+
         window.addEventListener('load', function() {
             initLatestFiles();
             initStats();
             initHomeSearch();
             updateCountdown();
             setInterval(updateCountdown, 1000);
+
+            if (document.getElementById('quoteText')) {
+                showQuote();
+                setInterval(showQuote, 6000);
+            }
         });
     </script>
 
