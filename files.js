@@ -44,4 +44,52 @@ const allFiles = [
         downloadName: "jozve-amar-ravash-tahghigh.pdf",
         color: "purple"
     },
+    {
+        title: "جزوه روانشناسی عمومی",
+        desc: "جزوه اختصاصی برگ دانش — تعریف روانشناسی، مکاتب، یادگیری، حافظه، هوش، شخصیت، انگیزش، رشد و ...",
+        category: "روانشناسی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/13elZtuifvT3kRuxxgOyKrbYxpmTHVDK6/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=13elZtuifvT3kRuxxgOyKrbYxpmTHVDK6",
+        downloadName: "jozve-ravanshenasi-omumi.pdf",
+        color: "purple"
+    },
+    {
+        title: "جزوه روانشناسی رشد",
+        desc: "جزوه اختصاصی برگ دانش — رشد پیش از تولد، نوزادی، کودکی، نوجوانی، بزرگسالی، سالمندی و نظریه‌های مهم رشد",
+        category: "روانشناسی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1kyHTp4611PI7_WGNJwj6nPrgkOinRKn4/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1kyHTp4611PI7_WGNJwj6nPrgkOinRKn4",
+        downloadName: "jozve-ravanshenasi-roshd.pdf",
+        color: "purple"
+    },
+    {
+        title: "جزوه روانشناسی شخصیت",
+        desc: "جزوه اختصاصی برگ دانش — نظریه‌های فروید، آدلر، یونگ، اریکسون، بندورا، مازلو، راجرز و مدل پنج عامل بزرگ",
+        category: "روانشناسی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1-TsLOR5IzlbhV0z8aia9zmr1G8WK7wwH/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1-TsLOR5IzlbhV0z8aia9zmr1G8WK7wwH",
+        downloadName: "jozve-ravanshenasi-shakhsiat.pdf",
+        color: "purple"
+    },
+    {
+        title: "جزوه روانشناسی اجتماعی",
+        desc: "جزوه اختصاصی برگ دانش — نگرش، نفوذ اجتماعی، همرنگی، اطاعت، گروه‌ها، رهبری، جاذبه و پیش‌داوری",
+        category: "روانشناسی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1SmpFYokvs91iATrv_ks1LBJrFcsb2QJt/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1SmpFYokvs91iATrv_ks1LBJrFcsb2QJt",
+        downloadName: "jozve-ravanshenasi-ejtemaei.pdf",
+        color: "purple"
+    },
 ];
