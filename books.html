@@ -42,6 +42,8 @@
         </div>
     </header>
 
+    <button class="nav-close" id="navClose" aria-label="بستن منو">✕</button>
+
     <section class="page-header">
         <div class="container page-header__inner">
             <h1 class="page-header__title">📖 کتاب‌ها</h1>
@@ -143,12 +145,40 @@
 
         // ===== منوی موبایل =====
         const menuToggle = document.getElementById('menuToggle');
+        const navClose = document.getElementById('navClose');
         const nav = document.querySelector('.nav');
+
+        function openMenu() {
+            if (!nav) return;
+            nav.classList.add('nav--open');
+            if (menuToggle) menuToggle.textContent = '✕';
+            if (navClose) navClose.style.display = 'inline-flex';
+        }
+
+        function closeMenu() {
+            if (!nav) return;
+            nav.classList.remove('nav--open');
+            if (menuToggle) menuToggle.textContent = '☰';
+            if (navClose) navClose.style.display = 'none';
+        }
 
         if (menuToggle && nav) {
             menuToggle.addEventListener('click', () => {
-                nav.classList.toggle('nav--open');
-                menuToggle.textContent = nav.classList.contains('nav--open') ? '✕' : '☰';
+                if (nav.classList.contains('nav--open')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+        }
+
+        if (navClose) {
+            navClose.addEventListener('click', closeMenu);
+        }
+
+        if (nav) {
+            nav.querySelectorAll('.nav__link').forEach(link => {
+                link.addEventListener('click', closeMenu);
             });
         }
 
@@ -205,7 +235,6 @@
                     if (match) found++;
                 });
 
-                // اگر چیزی پیدا نشد، پیام بده
                 const container = document.querySelector('.js-cards');
                 let noResult = container.querySelector('.no-result');
                 if (found === 0 && query) {

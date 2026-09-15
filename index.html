@@ -15,13 +15,12 @@
 </head>
 <body>
 
-    <!-- ===== هدر ===== -->
     <header class="header">
         <div class="container header__inner">
             <a href="index.html" class="logo">
-    <span class="logo__icon">📚</span>
-    <span>برگ دانش</span>
-</a>
+                <span class="logo__icon">📚</span>
+                <span>برگ دانش</span>
+            </a>
 
             <nav class="nav">
                 <a href="index.html" class="nav__link nav__link--active">خانه</a>
@@ -44,7 +43,8 @@
         </div>
     </header>
 
-    <!-- ===== Hero ===== -->
+    <button class="nav-close" id="navClose" aria-label="بستن منو">✕</button>
+
     <section class="hero">
         <div class="container">
             <div class="hero__inner">
@@ -68,7 +68,6 @@
                     <button type="submit" class="btn btn--primary">🔍 جستجو</button>
                 </form>
 
-                <!-- ===== نتایج جستجو ===== -->
                 <div id="searchResults" style="display: none; margin-top: 24px; text-align: right;">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
                         <h3 style="font-size: 18px; font-weight: 700; color: var(--text); margin: 0;">
@@ -82,14 +81,10 @@
         </div>
     </section>
 
-    <!-- ===== ویژگی‌ها + Sidebar ===== -->
     <section class="section">
         <div class="container">
             <div class="layout-with-sidebar">
-
-                <!-- ستون اصلی -->
                 <div>
-
                     <div class="section__header">
                         <h2 class="section__title">چرا برگ دانش؟</h2>
                         <p class="section__subtitle">چیزی که ما را متفاوت می‌کند</p>
@@ -118,7 +113,6 @@
                         </div>
                     </div>
 
-                    <!-- ===== بخش جدید: آخرین فایل‌ها ===== -->
                     <div class="section__header" style="text-align: right; margin-left: 0; max-width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
                         <div>
                             <h2 class="section__title">🆕 آخرین فایل‌های اضافه‌شده</h2>
@@ -129,7 +123,6 @@
 
                     <div class="cards-grid" id="latestFiles" style="margin-bottom: 48px;"></div>
 
-                    <!-- ===== بخش جدید: آمار سایت ===== -->
                     <div class="stats-box">
                         <div class="stat-item">
                             <div class="stat-item__number" id="statNotes">۰</div>
@@ -148,96 +141,34 @@
                             <div class="stat-item__label">📄 مقاله</div>
                         </div>
                     </div>
-
                 </div>
 
-                <!-- ستون کنار: Sidebar -->
                 <aside class="sidebar">
                     <h3 class="sidebar__title">🔗 لینک‌های مفید</h3>
                     <ul class="sidebar__list">
-
                         <li class="sidebar__section">🏫 آموزش و پرورش</li>
-                        <li>
-                            <a href="https://my.medu.ir" target="_blank" rel="noopener" class="sidebar__link">
-                                📌 مای مدیو
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://chap.sch.ir" target="_blank" rel="noopener" class="sidebar__link">
-                                📚 کتاب‌های درسی
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://shad.ir" target="_blank" rel="noopener" class="sidebar__link">
-                                📺 شبکه شاد
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.roshd.ir" target="_blank" rel="noopener" class="sidebar__link">
-                                📖 شبکه رشد
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.medu.ir" target="_blank" rel="noopener" class="sidebar__link">
-                                🏛️ وزارت آموزش و پرورش
-                            </a>
-                        </li>
+                        <li><a href="https://my.medu.ir" target="_blank" rel="noopener" class="sidebar__link">📌 مای مدیو</a></li>
+                        <li><a href="https://chap.sch.ir" target="_blank" rel="noopener" class="sidebar__link">📚 کتاب‌های درسی</a></li>
+                        <li><a href="https://shad.ir" target="_blank" rel="noopener" class="sidebar__link">📺 شبکه شاد</a></li>
+                        <li><a href="https://www.roshd.ir" target="_blank" rel="noopener" class="sidebar__link">📖 شبکه رشد</a></li>
+                        <li><a href="https://www.medu.ir" target="_blank" rel="noopener" class="sidebar__link">🏛️ وزارت آموزش و پرورش</a></li>
 
                         <li class="sidebar__section">🎓 دانشگاهی</li>
-                        <li>
-                            <a href="https://www.sanjesh.org" target="_blank" rel="noopener" class="sidebar__link">
-                                📝 سازمان سنجش
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://irandoc.ac.ir" target="_blank" rel="noopener" class="sidebar__link">
-                                📚 ایرانداک
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.sid.ir" target="_blank" rel="noopener" class="sidebar__link">
-                                🔬 پایگاه SID
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.magiran.com" target="_blank" rel="noopener" class="sidebar__link">
-                                📰 مگ‌ایران
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.noormags.ir" target="_blank" rel="noopener" class="sidebar__link">
-                                📖 نورمگز
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.civilica.com" target="_blank" rel="noopener" class="sidebar__link">
-                                🏗️ سیویلیکا
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.ensani.ir" target="_blank" rel="noopener" class="sidebar__link">
-                                🧠 پرتال علوم انسانی
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://scholar.google.com" target="_blank" rel="noopener" class="sidebar__link">
-                                🔍 Google Scholar
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.msrt.ir" target="_blank" rel="noopener" class="sidebar__link">
-                                🏛️ وزارت علوم
-                            </a>
-                        </li>
-
+                        <li><a href="https://www.sanjesh.org" target="_blank" rel="noopener" class="sidebar__link">📝 سازمان سنجش</a></li>
+                        <li><a href="https://irandoc.ac.ir" target="_blank" rel="noopener" class="sidebar__link">📚 ایرانداک</a></li>
+                        <li><a href="https://www.sid.ir" target="_blank" rel="noopener" class="sidebar__link">🔬 پایگاه SID</a></li>
+                        <li><a href="https://www.magiran.com" target="_blank" rel="noopener" class="sidebar__link">📰 مگ‌ایران</a></li>
+                        <li><a href="https://www.noormags.ir" target="_blank" rel="noopener" class="sidebar__link">📖 نورمگز</a></li>
+                        <li><a href="https://www.civilica.com" target="_blank" rel="noopener" class="sidebar__link">🏗️ سیویلیکا</a></li>
+                        <li><a href="https://www.ensani.ir" target="_blank" rel="noopener" class="sidebar__link">🧠 پرتال علوم انسانی</a></li>
+                        <li><a href="https://scholar.google.com" target="_blank" rel="noopener" class="sidebar__link">🔍 Google Scholar</a></li>
+                        <li><a href="https://www.msrt.ir" target="_blank" rel="noopener" class="sidebar__link">🏛️ وزارت علوم</a></li>
                     </ul>
                 </aside>
-
             </div>
         </div>
     </section>
 
-    <!-- ===== CTA ===== -->
     <section class="section">
         <div class="container">
             <div class="cta">
@@ -253,7 +184,6 @@
         </div>
     </section>
 
-    <!-- ===== فوتر ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -267,7 +197,6 @@
                         <strong style="color:#fff;">دانش، یک برگ فاصله دارد.</strong>
                     </p>
                 </div>
-
                 <div>
                     <h4 class="footer__title">دسترسی سریع</h4>
                     <ul class="footer__list">
@@ -279,7 +208,6 @@
                         <li><a href="books.html">کتاب‌ها</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="footer__title">دسته‌بندی‌ها</h4>
                     <ul class="footer__list">
@@ -289,7 +217,6 @@
                         <li><a href="articles.html">مقالات</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="footer__title">ارتباط با ما</h4>
                     <ul class="footer__list">
@@ -298,7 +225,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="footer__bottom">
                 <p>© ۱۴۰۳ برگ دانش — تمامی حقوق محفوظ است.</p>
             </div>
@@ -331,12 +257,40 @@
 
         // ===== منوی موبایل =====
         const menuToggle = document.getElementById('menuToggle');
+        const navClose = document.getElementById('navClose');
         const nav = document.querySelector('.nav');
+
+        function openMenu() {
+            if (!nav) return;
+            nav.classList.add('nav--open');
+            if (menuToggle) menuToggle.textContent = '✕';
+            if (navClose) navClose.style.display = 'inline-flex';
+        }
+
+        function closeMenu() {
+            if (!nav) return;
+            nav.classList.remove('nav--open');
+            if (menuToggle) menuToggle.textContent = '☰';
+            if (navClose) navClose.style.display = 'none';
+        }
 
         if (menuToggle && nav) {
             menuToggle.addEventListener('click', () => {
-                nav.classList.toggle('nav--open');
-                menuToggle.textContent = nav.classList.contains('nav--open') ? '✕' : '☰';
+                if (nav.classList.contains('nav--open')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+        }
+
+        if (navClose) {
+            navClose.addEventListener('click', closeMenu);
+        }
+
+        if (nav) {
+            nav.querySelectorAll('.nav__link').forEach(link => {
+                link.addEventListener('click', closeMenu);
             });
         }
 
@@ -442,7 +396,6 @@
             }
         }
 
-        // ===== اجرا بعد از لود files.js =====
         window.addEventListener('load', function() {
             initLatestFiles();
             initStats();

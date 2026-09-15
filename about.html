@@ -14,24 +14,17 @@
 </head>
 <body>
 
-    <!-- ===== هدر ===== -->
     <header class="header">
         <div class="container header__inner">
             <a href="index.html" class="logo">
-                <span class="logo__icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C8 2 5 5 5 9c0 3 2 5.5 5 6.5V19l-2 2h8l-2-2v-3.5c3-1 5-3.5 5-6.5 0-4-3-7-7-7z" fill="white" opacity="0.95"/>
-                        <path d="M12 4v10" stroke="#2563eb" stroke-width="0.8" stroke-linecap="round"/>
-                        <path d="M9 7l3 2M15 7l-3 2M9 11l3 2M15 11l-3 2" stroke="#2563eb" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
-                    </svg>
-                </span>
-                <span class="logo__text">برگ دانش</span>
+                <span class="logo__icon">📚</span>
+                <span>برگ دانش</span>
             </a>
 
             <nav class="nav">
                 <a href="index.html" class="nav__link">خانه</a>
                 <a href="university.html" class="nav__link">دانشگاهی</a>
-                <a href="school.html" class="nav__link">مدرسه‌ای</a>
+                <a href="school.html" class="nav__link">مدرسه ای</a>
                 <a href="exams.html" class="nav__link">نمونه سوال</a>
                 <a href="articles.html" class="nav__link">مقالات</a>
                 <a href="books.html" class="nav__link">کتاب‌ها</a>
@@ -45,11 +38,12 @@
                 <a href="#" class="btn btn--primary">ثبت‌نام</a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="منو">☰</button>
+            <button class="menu-toggle" id="menuToggle">☰</button>
         </div>
     </header>
 
-    <!-- ===== عنوان صفحه ===== -->
+    <button class="nav-close" id="navClose" aria-label="بستن منو">✕</button>
+
     <section class="page-header">
         <div class="container page-header__inner">
             <h1 class="page-header__title">✨ درباره ما</h1>
@@ -57,18 +51,13 @@
         </div>
     </section>
 
-    <!-- ===== محتوا ===== -->
     <main class="section">
         <div class="container" style="max-width: 860px;">
 
             <div style="text-align: center; margin-bottom: var(--sp-8);">
                 <div style="margin-bottom: var(--sp-4); display: inline-flex;">
-                    <span class="logo__icon" style="width: 88px; height: 88px; border-radius: 20px;">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 48px; height: 48px;">
-                            <path d="M12 2C8 2 5 5 5 9c0 3 2 5.5 5 6.5V19l-2 2h8l-2-2v-3.5c3-1 5-3.5 5-6.5 0-4-3-7-7-7z" fill="white" opacity="0.95"/>
-                            <path d="M12 4v10" stroke="#2563eb" stroke-width="0.8" stroke-linecap="round"/>
-                            <path d="M9 7l3 2M15 7l-3 2M9 11l3 2M15 11l-3 2" stroke="#2563eb" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
-                        </svg>
+                    <span class="logo__icon" style="width: 88px; height: 88px; border-radius: 20px; font-size: 44px;">
+                        📚
                     </span>
                 </div>
                 <h2 style="font-size: 28px; font-weight: 800; color: var(--primary-dark); margin-bottom: var(--sp-3);">
@@ -107,44 +96,28 @@
 
             <div class="features" style="margin-bottom: var(--sp-7);">
                 <div class="feature">
-                    <div class="feature__icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
+                    <div class="feature__icon">🆓</div>
                     <h3 class="feature__title">کاملاً رایگان</h3>
                     <p class="feature__desc">هیچ هزینه‌ای برای دانلود فایل‌ها پرداخت نمی‌کنید.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature__icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
+                    <div class="feature__icon">✅</div>
                     <h3 class="feature__title">محتوای تأییدشده</h3>
                     <p class="feature__desc">همه فایل‌ها قبل از انتشار بررسی می‌شوند.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature__icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor"/>
-                        </svg>
-                    </div>
+                    <div class="feature__icon">⚡</div>
                     <h3 class="feature__title">سرعت بالا</h3>
                     <p class="feature__desc">سایت سبک و سریع، بدون معطلی.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature__icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 12a9 9 0 11-3-6.7M21 3v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
+                    <div class="feature__icon">🔄</div>
                     <h3 class="feature__title">به‌روزرسانی مداوم</h3>
                     <p class="feature__desc">هر هفته فایل‌های جدید اضافه می‌شود.</p>
                 </div>
             </div>
 
-            <div style="background: var(--gradient-cta); padding: var(--sp-6); border-radius: var(--r-xl); text-align: center; color: #fff; margin-bottom: var(--sp-6); box-shadow: var(--shadow-primary-hover); position: relative; overflow: hidden;">
+            <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: var(--sp-6); border-radius: var(--r-xl); text-align: center; color: #fff; margin-bottom: var(--sp-6); box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25); position: relative; overflow: hidden;">
                 <div style="position: absolute; top: -50%; right: -10%; width: 320px; height: 320px; background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%); border-radius: 50%;"></div>
                 <h3 style="font-size: 22px; font-weight: 800; margin-bottom: var(--sp-5); position: relative; z-index: 1;">
                     برگ دانش در یک نگاه
@@ -181,39 +154,30 @@
         </div>
     </main>
 
-    <!-- ===== فوتر ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
                 <div>
                     <div class="logo logo--light">
-                        <span class="logo__icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C8 2 5 5 5 9c0 3 2 5.5 5 6.5V19l-2 2h8l-2-2v-3.5c3-1 5-3.5 5-6.5 0-4-3-7-7-7z" fill="white" opacity="0.95"/>
-                                <path d="M12 4v10" stroke="#2563eb" stroke-width="0.8" stroke-linecap="round"/>
-                                <path d="M9 7l3 2M15 7l-3 2M9 11l3 2M15 11l-3 2" stroke="#2563eb" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">برگ دانش</span>
+                        <span class="logo__icon">📚</span>
+                        <span>برگ دانش</span>
                     </div>
                     <p class="footer__desc">
-                        مرجع دانلود جزوه، کتاب و مقاله دانشگاهی.<br>
+                        مرجع دانلود جزوه، کتاب و مقاله.<br>
                         <strong style="color:#fff;">دانش، یک برگ فاصله دارد.</strong>
                     </p>
                 </div>
-
                 <div>
                     <h4 class="footer__title">دسترسی سریع</h4>
                     <ul class="footer__list">
                         <li><a href="index.html">خانه</a></li>
                         <li><a href="university.html">دانشگاهی</a></li>
-                        <li><a href="school.html">مدرسه‌ای</a></li>
+                        <li><a href="school.html">مدرسه ای</a></li>
                         <li><a href="exams.html">نمونه سوال</a></li>
                         <li><a href="articles.html">مقالات</a></li>
                         <li><a href="books.html">کتاب‌ها</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="footer__title">دسته‌بندی‌ها</h4>
                     <ul class="footer__list">
@@ -223,7 +187,6 @@
                         <li><a href="#">زبان انگلیسی</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="footer__title">ارتباط با ما</h4>
                     <ul class="footer__list">
@@ -234,7 +197,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="footer__bottom">
                 <p>© ۱۴۰۳ برگ دانش — تمامی حقوق محفوظ است.</p>
             </div>
@@ -265,21 +227,42 @@
             }
         });
 
+        // ===== منوی موبایل =====
         const menuToggle = document.getElementById('menuToggle');
+        const navClose = document.getElementById('navClose');
         const nav = document.querySelector('.nav');
+
+        function openMenu() {
+            if (!nav) return;
+            nav.classList.add('nav--open');
+            if (menuToggle) menuToggle.textContent = '✕';
+            if (navClose) navClose.style.display = 'inline-flex';
+        }
+
+        function closeMenu() {
+            if (!nav) return;
+            nav.classList.remove('nav--open');
+            if (menuToggle) menuToggle.textContent = '☰';
+            if (navClose) navClose.style.display = 'none';
+        }
 
         if (menuToggle && nav) {
             menuToggle.addEventListener('click', () => {
-                nav.classList.toggle('nav--open');
-                const isOpen = nav.classList.contains('nav--open');
-                menuToggle.textContent = isOpen ? '✕' : '☰';
+                if (nav.classList.contains('nav--open')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
             });
+        }
 
+        if (navClose) {
+            navClose.addEventListener('click', closeMenu);
+        }
+
+        if (nav) {
             nav.querySelectorAll('.nav__link').forEach(link => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('nav--open');
-                    menuToggle.textContent = '☰';
-                });
+                link.addEventListener('click', closeMenu);
             });
         }
     </script>
