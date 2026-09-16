@@ -202,5 +202,53 @@ const allFiles = [
         downloadUrl: "https://drive.google.com/uc?export=download&id=13wvUg5DezDmRsEKSDD7tIbuZH3FCGSJT",
         downloadName: "jozve-arzyabi-sanjesh.pdf",
         color: "blue"
+    },
+    {
+        title: "جزوه فرهنگ و جامعه",
+        desc: "مفاهیم پایه فرهنگ، ارزش‌ها، هنجارها، نمادها، نسبیت فرهنگی و تغییرات فرهنگی",
+        category: "جامعه‌شناسی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1eDve43xbWhZS7EntmJf6mZzdX6QyhwqP/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1eDve43xbWhZS7EntmJf6mZzdX6QyhwqP",
+        downloadName: "jozve-farhang-va-jamee.pdf",
+        color: "blue"
+    },
+    {
+        title: "جزوه مبانی و مفاهیم اساسی جامعه‌شناسی",
+        desc: "جامعه، کنش اجتماعی، تعامل، گروه، نهاد، پایگاه، نقش و ساختار اجتماعی",
+        category: "جامعه‌شناسی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1HEm77iAGSZ7hBoxYRkq1S_ssRhxKVpPJ/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1HEm77iAGSZ7hBoxYRkq1S_ssRhxKVpPJ",
+        downloadName: "jozve-mabani-jamee-shenasi.pdf",
+        color: "purple"
+    },
+    {
+        title: "جزوه ضمایر شخصی و فعل To Be در زبان انگلیسی",
+        desc: "آموزش ضمایر شخصی، فعل To Be، جمله‌های مثبت، منفی و پرسشی",
+        category: "زبان انگلیسی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1wsY_DBRlUpYVGzZtef_MvZsZVrkYHKwF/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1wsY_DBRlUpYVGzZtef_MvZsZVrkYHKwF",
+        downloadName: "jozve-zaban-english-zamayer-va-to-be-1.pdf",
+        color: "blue"
+    },
+    {
+        title: "جزوه اسم، صفت و ساختار جمله‌های ساده",
+        desc: "آموزش اسم، صفت و ساختار جمله‌های ساده در زبان انگلیسی",
+        category: "زبان انگلیسی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "جزوه اختصاصی برگ دانش",
+        viewUrl: "https://drive.google.com/file/d/1k7RCPmgHGiG5wRvVhnSfj6KcsIdO7PoO/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1k7RCPmgHGiG5wRvVhnSfj6KcsIdO7PoO",
+        downloadName: "jozve-esm-sefat-sakhtar-jomle.pdf",
+        color: "green"
     }
 ];

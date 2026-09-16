@@ -93,14 +93,12 @@ button { cursor: pointer; border: none; background: none; }
     width: 100%;
 }
 
-/* روی مانیتورهای خیلی بزرگ، بازهم عریض‌تر */
 @media (min-width: 1600px) {
     .container {
         max-width: 1560px;
     }
 }
 
-/* تبلت — برگرد به حالت امن */
 @media (max-width: 1024px) {
     .container {
         max-width: 100%;
@@ -795,12 +793,11 @@ button { cursor: pointer; border: none; background: none; }
     color: var(--primary);
     margin-top: var(--sp-2);
 }
-
 /* ===== کارت‌ها ===== */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--sp-5);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--sp-4);
 }
 
 .content-card {
@@ -883,6 +880,7 @@ button { cursor: pointer; border: none; background: none; }
     flex-wrap: wrap;
     padding-top: var(--sp-2);
 }
+
 /* ===== CTA ===== */
 .cta {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -1160,7 +1158,6 @@ button { cursor: pointer; border: none; background: none; }
     border-right-color: var(--primary);
     transform: translateX(-4px);
 }
-
 /* ============================================
    آمار سایت
    ============================================ */
@@ -1527,63 +1524,68 @@ html[data-theme="dark"] .filter-bar {
         background-color: var(--bg-alt);
     }
 
+    /* ===== کارت‌ها: دو ستونه و کوچیک‌تر ===== */
     .cards-grid {
-        grid-template-columns: 1fr;
-        gap: var(--sp-4);
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--sp-3);
     }
 
     .content-card {
-        padding: var(--sp-4);
+        padding: var(--sp-3);
         gap: var(--sp-2);
     }
 
     .content-card__title {
-        font-size: 15px;
-        line-height: 1.6;
+        font-size: 13px;
+        line-height: 1.5;
     }
 
     .content-card__desc {
-        font-size: 13px;
-        line-height: 1.7;
+        font-size: 11px;
+        line-height: 1.6;
     }
 
     .content-card__badge {
-        font-size: 11px;
-        padding: 3px 10px;
+        font-size: 10px;
+        padding: 2px 8px;
     }
 
     .content-card__meta {
-        font-size: 12px;
-        gap: var(--sp-2);
+        font-size: 10px;
+        gap: var(--sp-1);
         padding: var(--sp-2) 0;
     }
 
     .content-card__footer {
-        gap: var(--sp-2);
+        gap: var(--sp-1);
+        flex-direction: column;
     }
 
     .content-card__footer .btn {
-        flex: 1;
-        padding: 9px 12px;
-        font-size: 12px;
+        width: 100%;
+        padding: 7px 10px;
+        font-size: 11px;
     }
 
+    /* ===== کارت دسته‌بندی: کوچیک‌تر ===== */
     .category-card {
-        padding: var(--sp-5) var(--sp-4);
+        padding: var(--sp-4) var(--sp-3);
+        gap: var(--sp-2);
     }
 
     .category-card__icon {
-        width: 60px;
-        height: 60px;
-        font-size: 28px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
     }
 
     .category-card__title {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .category-card__desc {
-        font-size: 13px;
+        font-size: 11px;
+        line-height: 1.5;
     }
 
     .features {
@@ -1831,19 +1833,21 @@ html[data-theme="dark"] .filter-bar {
     .page-header__title { font-size: 22px; }
     .section__title { font-size: 18px; }
 
+    /* ===== کارت‌ها: بازهم کوچیک‌تر ===== */
     .content-card__title {
-        font-size: 14px;
+        font-size: 12px;
+        line-height: 1.5;
     }
 
-    .content-card__footer {
-        flex-direction: column;
-        align-items: stretch;
+    .content-card__desc {
+        font-size: 10px;
+        line-height: 1.5;
     }
 
     .content-card__footer .btn {
         width: 100%;
-        font-size: 12px;
-        padding: 8px 10px;
+        font-size: 10px;
+        padding: 6px 8px;
     }
 
     .footer__grid { grid-template-columns: 1fr; }
