@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کتاب‌های غیر درسی | برگ دانش</title>
-    <meta name="description" content="کتاب‌های غیر درسی — رمان، داستان، شعر | برگ دانش">
+    <title>منابع غیر درسی | برگ دانش</title>
+    <meta name="description" content="منابع غیر درسی — کتاب، رمان، شعر و... | برگ دانش">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
                 <a href="school.html" class="nav__link">مدرسه ای</a>
                 <a href="exams.html" class="nav__link">نمونه سوال</a>
                 <a href="articles.html" class="nav__link">مقالات</a>
-                <a href="books.html" class="nav__link nav__link--active">کتاب‌های غیر درسی</a>
+                <a href="books.html" class="nav__link nav__link--active">منابع غیر درسی</a>
             </nav>
 
             <div class="header__actions">
@@ -47,8 +47,8 @@
 
     <section class="page-header">
         <div class="container page-header__inner">
-            <h1 class="page-header__title">📖 کتاب‌های غیر درسی</h1>
-            <p class="page-header__subtitle">رمان، داستان و شعر — برای علاقه‌مندان به مطالعه</p>
+            <h1 class="page-header__title">📖 منابع غیر درسی</h1>
+            <p class="page-header__subtitle">کتاب، رمان، شعر و... — برای علاقه‌مندان به مطالعه</p>
         </div>
     </section>
 
@@ -94,7 +94,7 @@
                         <li><a href="school.html">مدرسه ای</a></li>
                         <li><a href="exams.html">نمونه سوال</a></li>
                         <li><a href="articles.html">مقالات</a></li>
-                        <li><a href="books.html">کتاب‌های غیر درسی</a></li>
+                        <li><a href="books.html">منابع غیر درسی</a></li>
                     </ul>
                 </div>
 
@@ -121,7 +121,7 @@
             </div>
 
             <div class="footer__bottom">
-                <p>© ۱۴۰۳ برگ دانش — تمامی حقوق محفوظ است.</p>
+                <p>© 1405 - برگ دانش ، تمامی حقوق محفوظ است</p>
             </div>
         </div>
     </footer>
@@ -228,7 +228,7 @@
             });
 
             if (filtered.length === 0) {
-                container.innerHTML = '<p style="text-align: center; padding: 60px 20px; color: #999; grid-column: 1 / -1; font-size: 15px;">📚 هنوز کتابی اضافه نشده است. به‌زودی...</p>';
+                container.innerHTML = '<p style="text-align: center; padding: 60px 20px; color: #999; grid-column: 1 / -1; font-size: 15px;">📚 هنوز منبعی اضافه نشده است. به‌زودی...</p>';
             } else {
                 container.innerHTML = filtered.map(createCard).join('');
             }
