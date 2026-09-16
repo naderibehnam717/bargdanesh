@@ -319,5 +319,65 @@ const allFiles = [
         downloadUrl: "https://drive.google.com/uc?export=download&id=1RoPh2ftXp6nsbk0KYST_3-o82DAcwy-S",
         downloadName: "dastan-tafsir-e-yek-khab",
         color: "orange"
+    },
+    {
+        title: "رمان گیرنده شناخته نشد",
+        desc: "کاترین کرسمن تیلور - ترجمه بهمن دارالشفایی",
+        category: "رمان",
+        type: "منابع غیر درسی",
+        level: "غیر درسی",
+        author: "کاترین کرسمن تیلور",
+        viewUrl: "https://drive.google.com/file/d/1Htt13U_hlylyQM3NXzvMl7JccQcCWfdn/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1Htt13U_hlylyQM3NXzvMl7JccQcCWfdn",
+        downloadName: "roman-girandeh-shenakhte-nashod.pdf",
+        color: "red"
+    },
+    {
+        title: "رمان پیش از آنکه بخوابم",
+        desc: "اس . جی . واتسون - مترجم شقایق قندهاری",
+        category: "رمان",
+        type: "منابع غیر درسی",
+        level: "غیر درسی",
+        author: "اس . جی . واتسون",
+        viewUrl: "https://drive.google.com/file/d/1YJyTqEOlQ-PdFV75mlN67O36Cob4PRiV/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1YJyTqEOlQ-PdFV75mlN67O36Cob4PRiV",
+        downloadName: "roman-pish-az-an-ke-bekhabam.pdf",
+        color: "blue"
+    },
+    {
+        title: "رمان به خدای ناشناخته",
+        desc: "جان اشتاین بک - مترجم محمد معینی",
+        category: "رمان",
+        type: "منابع غیر درسی",
+        level: "غیر درسی",
+        author: "جان اشتاین بک",
+        viewUrl: "https://drive.google.com/file/d/17ucqhPszuoxLRhLKAp4xKJt65UWXTAMJ/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=17ucqhPszuoxLRhLKAp4xKJt65UWXTAMJ",
+        downloadName: "roman-be-khodaye-nashenakhte.pdf",
+        color: "black"
+    },
+    {
+        title: "رمان گهواره ی گربه",
+        desc: "کرت ونه گوت جونیور - مترجم علی اصغر بهرامی",
+        category: "رمان",
+        type: "منابع غیر درسی",
+        level: "غیر درسی",
+        author: "کرت ونه گوت جونیور",
+        viewUrl: "https://drive.google.com/file/d/1r3oplGCww6GkXNYxuUEaGiNWeA9KUopb/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1r3oplGCww6GkXNYxuUEaGiNWeA9KUopb",
+        downloadName: "roman-gahvareye-gorbe.pdf",
+        color: "yellow"
+    },
+    {
+        title: "رمان شکست ناپذیر",
+        desc: "ارنست همینگوی - مترجمان مرسده بصیریان | همایون حنیفه وند مقدم",
+        category: "رمان",
+        type: "منابع غیر درسی",
+        level: "غیر درسی",
+        author: "ارنست همینگوی",
+        viewUrl: "https://drive.google.com/file/d/17JUndqMctJX3BAOO2ClZovDl8m9h3woD/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=17JUndqMctJX3BAOO2ClZovDl8m9h3woD",
+        downloadName: "roman-shekast-napazir.pdf",
+        color: "yellow"
     }
 ];
