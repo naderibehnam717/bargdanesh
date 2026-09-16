@@ -379,5 +379,17 @@ const allFiles = [
         downloadUrl: "https://drive.google.com/uc?export=download&id=17JUndqMctJX3BAOO2ClZovDl8m9h3woD",
         downloadName: "roman-shekast-napazir.pdf",
         color: "yellow"
+    },
+    {
+        title: "جزوه شیمی آلی",
+        desc: "شیمی آلی فصل یک - دکتر پارسا فراهانی",
+        category: "شیمی",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "دکتر پارسا فراهانی",
+        viewUrl: "https://drive.google.com/file/d/1tcVBDuI85FrCEjelFCUPc0IxCg5b2Nhe/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1tcVBDuI85FrCEjelFCUPc0IxCg5b2Nhe",
+        downloadName: "jozve-shimi-aali.pdf",
+        color: "green"
     }
 ];

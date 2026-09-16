@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شیمی | برگ دانش</title>
+    <meta name="description" content="جزوات شیمی — برگ دانش">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__icon">📚</span>
+                <span>برگ دانش</span>
+            </a>
+
+            <nav class="nav">
+                <a href="index.html" class="nav__link">خانه</a>
+                <a href="university.html" class="nav__link nav__link--active">دانشگاهی</a>
+                <a href="school.html" class="nav__link">مدرسه ای</a>
+                <a href="exams.html" class="nav__link">نمونه سوال</a>
+                <a href="articles.html" class="nav__link">مقالات</a>
+                <a href="books.html" class="nav__link">منابع غیر درسی</a>
+            </nav>
+
+            <div class="header__actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="theme-toggle__icon">🌙</span>
+                </button>
+                <a href="#" class="btn btn--ghost">ورود</a>
+                <a href="#" class="btn btn--primary">ثبت‌نام</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span class="menu-toggle__icon">☰</span>
+                <span class="menu-toggle__text">دسته‌بندی</span>
+            </button>
+        </div>
+    </header>
+
+    <button class="nav-close" id="navClose" aria-label="بستن منو">✕</button>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <section class="subject-hero" data-subject="chemistry">
+        <div class="container">
+            <h1 class="subject-hero__title" data-text="CHEMISTRY"></h1>
+            <p class="subject-hero__subtitle">شیمی</p>
+        </div>
+    </section>
+
+    <main class="section">
+        <div class="container">
+
+            <div class="subject-intro">
+                <h2 class="subject-intro__title">📖 درباره‌ی شیمی</h2>
+                <p class="subject-intro__text">
+                    شیمی علم مطالعه‌ی ماده، خواص آن، ساختار اتم‌ها و مولکول‌ها و واکنش‌های بین آن‌هاست. این علم
+                    پایه‌ی بسیاری از علوم دیگر مانند زیست‌شناسی، پزشکی، داروسازی، مهندسی مواد و زمین‌شناسی محسوب
+                    می‌شود و به ما کمک می‌کند ساختار جهان مادی را بهتر بفهمیم.
+                </p>
+                <p class="subject-intro__text">
+                    در این بخش، جزوه‌های اختصاصی برگ دانش در زمینه‌های مختلف شیمی در اختیار شما قرار دارد.
+                    همه‌ی این جزوه‌ها به‌صورت رایگان و با کیفیت بالا آماده شده‌اند.
+                </p>
+            </div>
+
+            <div class="layout-with-sidebar">
+
+                <div>
+                    <div class="section__header" style="text-align: right; margin-left: 0; max-width: 100%;">
+                        <h2 class="section__title">📚 جزوه‌های شیمی</h2>
+                        <p class="section__subtitle">جزوات اختصاصی برگ دانش</p>
+                    </div>
+
+                    <div class="cards-grid js-cards" data-category="شیمی"></div>
+                </div>
+
+                <aside class="sidebar">
+                    <h3 class="sidebar__title">🔗 موضوعات مرتبط</h3>
+                    <ul class="sidebar__list">
+                        <li>
+                            <a href="physics.html" class="sidebar__link">
+                                ⚛️ فیزیک
+                            </a>
+                        </li>
+                        <li>
+                            <a href="university.html" class="sidebar__link">
+                                🎓 همه‌ی موضوعات دانشگاهی
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h3 class="sidebar__title" style="margin-top: 24px;">📂 موضوعات دیگر</h3>
+                    <ul class="sidebar__list">
+                        <li>
+                            <a href="computer.html" class="sidebar__link">
+                                💻 کامپیوتر
+                            </a>
+                        </li>
+                        <li>
+                            <a href="psychology.html" class="sidebar__link">
+                                🧠 روانشناسی
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <div class="logo logo--light">
+                        <span class="logo__icon">📚</span>
+                        <span>برگ دانش</span>
+                    </div>
+                    <p class="footer__desc">
+                        مرجع دانلود جزوه، کتاب و مقاله.<br>
+                        <strong style="color:#fff;">دانش، یک برگ فاصله دارد.</strong>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer__title">دسترسی سریع</h4>
+                    <ul class="footer__list">
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="university.html">دانشگاهی</a></li>
+                        <li><a href="school.html">مدرسه ای</a></li>
+                        <li><a href="exams.html">نمونه سوال</a></li>
+                        <li><a href="articles.html">مقالات</a></li>
+                        <li><a href="books.html">منابع غیر درسی</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title">موضوعات</h4>
+                    <ul class="footer__list">
+                        <li><a href="psychology.html">روانشناسی</a></li>
+                        <li><a href="education.html">علوم تربیتی</a></li>
+                        <li><a href="sociology.html">جامعه‌شناسی</a></li>
+                        <li><a href="english.html">زبان انگلیسی</a></li>
+                        <li><a href="computer.html">کامپیوتر</a></li>
+                        <li><a href="physics.html">فیزیک</a></li>
+                        <li><a href="chemistry.html">شیمی</a></li>
+                        <li><a href="islamic.html">معارف</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title">ارتباط با ما</h4>
+                    <ul class="footer__list">
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 1405 - برگ دانش ، تمامی حقوق محفوظ است</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="files.js"></script>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            themeIcon.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const navClose = document.getElementById('navClose');
+        const navOverlay = document.getElementById('navOverlay');
+        const nav = document.querySelector('.nav');
+
+        function openMenu() {
+            if (!nav) return;
+            nav.classList.add('nav--open');
+            if (menuToggle) { var menuIcon = menuToggle.querySelector('.menu-toggle__icon'); if (menuIcon) menuIcon.textContent = '✕'; }
+            if (navClose) navClose.style.display = 'inline-flex';
+            if (navOverlay) navOverlay.classList.add('nav-overlay--active');
+        }
+
+        function closeMenu() {
+            if (!nav) return;
+            nav.classList.remove('nav--open');
+            if (menuToggle) { var menuIcon = menuToggle.querySelector('.menu-toggle__icon'); if (menuIcon) menuIcon.textContent = '☰'; }
+            if (navClose) navClose.style.display = 'none';
+            if (navOverlay) navOverlay.classList.remove('nav-overlay--active');
+        }
+
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                if (nav.classList.contains('nav--open')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+        }
+
+        if (navClose) navClose.addEventListener('click', closeMenu);
+        if (navOverlay) navOverlay.addEventListener('click', closeMenu);
+
+        if (nav) {
+            nav.querySelectorAll('.nav__link').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        }
+
+        function createCard(file) {
+            var buttons = '';
+            if (file.viewUrl) {
+                buttons += '<a href="' + file.viewUrl + '" target="_blank" class="btn btn--primary btn--sm">مشاهده</a>';
+            }
+            if (file.downloadUrl) {
+                buttons += '<a href="' + file.downloadUrl + '" download="' + file.downloadName + '" class="btn btn--outline btn--sm">دانلود</a>';
+            }
+            if (!file.viewUrl && !file.downloadUrl) {
+                buttons = '<span style="color: #999; font-size: 13px;">به‌زودی...</span>';
+            }
+
+            return '<article class="content-card">' +
+                '<span class="content-card__badge content-card__badge--' + file.color + '">' + file.category + '</span>' +
+                '<h3 class="content-card__title">' + file.title + '</h3>' +
+                '<p class="content-card__desc">' + file.desc + '</p>' +
+                '<div class="content-card__meta">' +
+                    '<span>📎 ' + file.type + '</span>' +
+                    (file.author ? '<span>✍️ ' + file.author + '</span>' : '') +
+                '</div>' +
+                '<div class="content-card__footer">' + buttons + '</div>' +
+            '</article>';
+        }
+
+        document.querySelectorAll('.js-cards').forEach(function(container) {
+            var category = container.dataset.category;
+            var filtered = allFiles.filter(function(file) {
+                return file.category === category;
+            });
+            if (filtered.length === 0) {
+                container.innerHTML = '<p style="text-align: center; padding: 40px; color: #999; grid-column: 1 / -1;">فایلی موجود نیست</p>';
+            } else {
+                container.innerHTML = filtered.map(createCard).join('');
+            }
+        });
+
+        function initSubjectAnimation() {
+            const title = document.querySelector('.subject-hero__title');
+            if (!title) return;
+
+            const text = title.dataset.text || '';
+            const colors = ['#10b981', '#06b6d4', '#8b5cf6', '#2563eb', '#f59e0b', '#ec4899'];
+
+            title.innerHTML = '';
+
+            const spans = [];
+            for (let i = 0; i < text.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = text[i];
+                span.style.color = colors[i % colors.length];
+                span.style.opacity = '0';
+                span.style.display = 'inline-block';
+                span.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                span.style.transform = 'translateY(-20px)';
+                title.appendChild(span);
+                spans.push(span);
+            }
+
+            function animateIn() {
+                spans.forEach((span, i) => {
+                    setTimeout(() => {
+                        span.style.opacity = '1';
+                        span.style.transform = 'translateY(0)';
+                    }, i * 150);
+                });
+
+                const totalInTime = spans.length * 150 + 400;
+                setTimeout(animateOut, totalInTime + 3000);
+            }
+
+            function animateOut() {
+                spans.forEach((span, i) => {
+                    setTimeout(() => {
+                        span.style.opacity = '0';
+                        span.style.transform = 'translateY(20px)';
+                    }, i * 80);
+                });
+
+                const totalOutTime = spans.length * 80 + 400;
+                setTimeout(animateIn, totalOutTime + 1000);
+            }
+
+            animateIn();
+        }
+
+        window.addEventListener('load', initSubjectAnimation);
+    </script>
+
+</body>
+</html>
