@@ -39,7 +39,10 @@
                 <a href="#" class="btn btn--primary">ثبت‌نام</a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle">☰</button>
+            <button class="menu-toggle" id="menuToggle">
+    <span class="menu-toggle__icon">☰</span>
+    <span class="menu-toggle__text">دسته‌بندی</span>
+</button>
         </div>
     </header>
 
@@ -234,21 +237,13 @@
                     <ul class="sidebar__list">
                         <li class="sidebar__section">🏫 آموزش و پرورش</li>
                         <li><a href="https://my.medu.ir" target="_blank" rel="noopener" class="sidebar__link">📌 مای مدیو</a></li>
-                        <li><a href="https://chap.sch.ir" target="_blank" rel="noopener" class="sidebar__link">📚 کتاب‌های درسی</a></li>
-                        <li><a href="https://shad.ir" target="_blank" rel="noopener" class="sidebar__link">📺 شبکه شاد</a></li>
-                        <li><a href="https://www.roshd.ir" target="_blank" rel="noopener" class="sidebar__link">📖 شبکه رشد</a></li>
                         <li><a href="https://www.medu.ir" target="_blank" rel="noopener" class="sidebar__link">🏛️ وزارت آموزش و پرورش</a></li>
-
-                        <li class="sidebar__section">🎓 دانشگاهی</li>
-                        <li><a href="https://www.sanjesh.org" target="_blank" rel="noopener" class="sidebar__link">📝 سازمان سنجش</a></li>
-                        <li><a href="https://irandoc.ac.ir" target="_blank" rel="noopener" class="sidebar__link">📚 ایرانداک</a></li>
-                        <li><a href="https://www.sid.ir" target="_blank" rel="noopener" class="sidebar__link">🔬 پایگاه SID</a></li>
-                        <li><a href="https://www.magiran.com" target="_blank" rel="noopener" class="sidebar__link">📰 مگ‌ایران</a></li>
-                        <li><a href="https://www.noormags.ir" target="_blank" rel="noopener" class="sidebar__link">📖 نورمگز</a></li>
-                        <li><a href="https://www.civilica.com" target="_blank" rel="noopener" class="sidebar__link">🏗️ سیویلیکا</a></li>
-                        <li><a href="https://www.ensani.ir" target="_blank" rel="noopener" class="sidebar__link">🧠 پرتال علوم انسانی</a></li>
-                        <li><a href="https://scholar.google.com" target="_blank" rel="noopener" class="sidebar__link">🔍 Google Scholar</a></li>
                         <li><a href="https://www.msrt.ir" target="_blank" rel="noopener" class="sidebar__link">🏛️ وزارت علوم</a></li>
+
+                        <li class="sidebar__section">🎓 سامانه‌ها</li>
+                        <li><a href="https://www.sanjesh.org" target="_blank" rel="noopener" class="sidebar__link">📝 سازمان سنجش</a></li>
+                        <li><a href="https://Education.cfu.ac.ir" target="_blank" rel="noopener" class="sidebar__link">🎓 گلستان فرهنگیان</a></li>
+                        <li><a href="https://reg.pnu.ac.ir" target="_blank" rel="noopener" class="sidebar__link">🎓 گلستان پیام نور</a></li>
                     </ul>
                 </aside>
             </div>
@@ -351,7 +346,7 @@
         function openMenu() {
             if (!nav) return;
             nav.classList.add('nav--open');
-            if (menuToggle) menuToggle.textContent = '✕';
+            if (menuToggle) { var menuIcon = menuToggle.querySelector('.menu-toggle__icon'); if (menuIcon) menuIcon.textContent = '✕'; }
             if (navClose) navClose.style.display = 'inline-flex';
             if (navOverlay) navOverlay.classList.add('nav-overlay--active');
         }
@@ -359,7 +354,7 @@
         function closeMenu() {
             if (!nav) return;
             nav.classList.remove('nav--open');
-            if (menuToggle) menuToggle.textContent = '☰';
+            if (menuToggle) { var menuIcon = menuToggle.querySelector('.menu-toggle__icon'); if (menuIcon) menuIcon.textContent = '☰'; }
             if (navClose) navClose.style.display = 'none';
             if (navOverlay) navOverlay.classList.remove('nav-overlay--active');
         }

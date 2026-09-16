@@ -38,7 +38,10 @@
                 <a href="#" class="btn btn--primary">ثبت‌نام</a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle">☰</button>
+            <button class="menu-toggle" id="menuToggle">
+    <span class="menu-toggle__icon">☰</span>
+    <span class="menu-toggle__text">دسته‌بندی</span>
+</button>
         </div>
     </header>
 
@@ -197,7 +200,7 @@
         function openMenu() {
             if (!nav) return;
             nav.classList.add('nav--open');
-            if (menuToggle) menuToggle.textContent = '✕';
+            if (menuToggle) { var menuIcon = menuToggle.querySelector('.menu-toggle__icon'); if (menuIcon) menuIcon.textContent = '✕'; }
             if (navClose) navClose.style.display = 'inline-flex';
             if (navOverlay) navOverlay.classList.add('nav-overlay--active');
         }
@@ -205,7 +208,7 @@
         function closeMenu() {
             if (!nav) return;
             nav.classList.remove('nav--open');
-            if (menuToggle) menuToggle.textContent = '☰';
+            if (menuToggle) { var menuIcon = menuToggle.querySelector('.menu-toggle__icon'); if (menuIcon) menuIcon.textContent = '☰'; }
             if (navClose) navClose.style.display = 'none';
             if (navOverlay) navOverlay.classList.remove('nav-overlay--active');
         }
