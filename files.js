@@ -391,5 +391,28 @@ const allFiles = [
         downloadUrl: "https://drive.google.com/uc?export=download&id=1tcVBDuI85FrCEjelFCUPc0IxCg5b2Nhe",
         downloadName: "jozve-shimi-aali.pdf",
         color: "green"
+    },
+    {
+        title: "جزوه آشنایی با مبانی کامپیوتر",
+        desc: "جزوه آشنایی با مبانی کامپیوتر",
+        category: "کامپیوتر",
+        type: "جزوه",
+        level: "دانشگاهی",
+        viewUrl: "https://drive.google.com/file/d/1ioO93Bl87mw8tFWweRVq3-Er_PC3jStt/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1ioO93Bl87mw8tFWweRVq3-Er_PC3jStt",
+        downloadName: "jozve-ashenayi-ba-mabani-computer.pdf",
+        color: "green"
+    },
+    {
+        title: "مبانی کامپیوتر و برنامه سازی",
+        desc: "مبانی کامپیوتر و برنامه سازی - محمد هادی علائیان",
+        category: "کامپیوتر",
+        type: "جزوه",
+        level: "دانشگاهی",
+        author: "محمد هادی علائیان",
+        viewUrl: "https://drive.google.com/file/d/1NJE8gbPq0AQAvS4Z6162TFinmJBH4x0k/view",
+        downloadUrl: "https://drive.google.com/uc?export=download&id=1NJE8gbPq0AQAvS4Z6162TFinmJBH4x0k",
+        downloadName: "jozve-mabani-computer-v-barname-sazi.pdf",
+        color: "yellow"
     }
 ];
